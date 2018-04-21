@@ -193,12 +193,13 @@ predictions = {
 
 ### Backprop
 *Forward Pass*: pass a training image ($24x24x3$) through network
-    - Network outputs a _prediction_ (class vector; initially bad)
-    - Calculate _loss_ between prediction and reality (label)
+
+- Network outputs a _prediction_ (class vector; initially bad)
+- Calculate _loss_ between prediction and reality (label)
 
 +++
 
-Find $dL/dW$ (how loss changes with weights)
+Find $\frac{dL}{dW}$ (how loss changes with weights)
 
 +++
 
@@ -206,13 +207,17 @@ Find $dL/dW$ (how loss changes with weights)
 
 +++
 
-*Weight Update*: Update all filter weights in the _opposite direction_ of loss gradient $dL/dW$
+*Weight Update*: Update all filter weights in the _opposite direction_ of loss gradient $\frac{dL}{dW}$
 
 ---
 
 ## Important Learning Parameters
 - *loss function*: how to quantify difference between prediction and reality
 - *learning rate*: how much to update weights when traversing the loss gradient
+
+![Press Down Key](img/down-arrow.png)
++++
+
 - *epoch*: passing the entire dataset through the network once (generally split into batches)
 - *batch*: a subset of the dataset fed into the neural network at once
 - *iterations*: number of batches needed to complete an epoch
@@ -234,15 +239,23 @@ For 2000 training images, split into _batches_ of 500, it will take 4 _iteration
 ---
 
 ## Hyperparameter Optimization Methods
+
+Train with different sets of hyperparameters and see which combination yields the best results.
+
 - Grid Search
 - Random Search
+
+![Press Down Key](img/down-arrow.png)
++++
+
+### Grid vs Random Search
 ![search](img/searches.png)
 
 ---
 
-## ![Running it all: Google CoLab](https://tinyurl.com/packhacks-cnn)
+## ![Running it all: Google CoLab][https://tinyurl.com/packhacks-cnn]
 
-![https://tinyurl.com/packhacks-cnn](https://tinyurl.com/packhacks-cnn)
+![https://tinyurl.com/packhacks-cnn][https://tinyurl.com/packhacks-cnn]
 
 ---
 
