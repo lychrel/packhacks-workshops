@@ -3,8 +3,16 @@ with Keras
 
 ---
 
-## Convolutional Neural Networks
--
+## Why CNNs?
+- Image inputs
+
+![Press Down Key](img/down-arrow.png)
+
++++
+
+$$200\times 200\times 3 = 120,000$$
+
+parameters per neuron (in the first layer!)
 
 ---
 
@@ -25,6 +33,11 @@ with Keras
 
 ## model pic showing how CNN works
 ![conv1](img/CONV1.jpeg)
+
+![Press Down Key](img/down-arrow.png)
+
++++
+
 ![conv2](img/CONV2.jpeg)
 
 ---
