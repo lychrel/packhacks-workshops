@@ -101,6 +101,10 @@ parameters!
 ---
 
 # MNIST Digit Classification
+![Press Down Key](img/down-arrow.png)
++++
+
+![mnist](img/5mnist.png)
 
 ---
 
@@ -250,6 +254,25 @@ Train with different sets of hyperparameters and see which combination yields th
 
 ### Grid vs Random Search
 ![search](img/searches.png)
+
+---
+
+### Putting it All Together
+
++++?code=create_model.py&lang=python
+
+@[4](input layer)
+@[7-12](first convolutional layer)
+@[18-24](second convolutional layer)
+@[24](second pooling layer)
+@[27](flattening the pooling layer)
+@[28](dense (fully connected) layer)
+@[29](dropout normalization (40% chance of dropping any neuron in the dense layer))
+@[33](logits (classes for prediction))
+@[35-41](predicting the probability of each class using softmax)
+@[47](calculate loss)
+@[50-55](set learning parameters)
+@[58-62](evaluate model accuracy)
 
 ---
 
