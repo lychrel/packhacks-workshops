@@ -192,24 +192,21 @@ predictions = {
 ---
 
 ### Backprop
-1. *Forward Pass*: pass a training image ($24x24x3$) through network
+*Forward Pass*: pass a training image ($24x24x3$) through network
     - Network outputs a _prediction_ (class vector; initially bad)
     - Calculate _loss_ between prediction and reality (label)
 
-![Press Down Key](img/down-arrow.png)
 +++
 
-2. Find $dL/dW$ (how loss changes with weights)
+Find $dL/dW$ (how loss changes with weights)
 
-![Press Down Key](img/down-arrow.png)
 +++
 
-3. *Backward Pass*: finding the weights that contributed _the most_ to the total loss and determining how to change them to decrease loss
+*Backward Pass*: finding the weights that contributed _the most_ to the total loss and determining how to change them to decrease loss
 
-![Press Down Key](img/down-arrow.png)
 +++
 
-4. *Weight Update*: Update all filter weights in the _opposite direction_ of loss gradient $dL/dW$
+*Weight Update*: Update all filter weights in the _opposite direction_ of loss gradient $dL/dW$
 
 ---
 
@@ -243,7 +240,9 @@ For 2000 training images, split into _batches_ of 500, it will take 4 _iteration
 
 ---
 
-## Running it all: Google CoLab
+## ![Running it all: Google CoLab](https://tinyurl.com/packhacks-cnn)
+
+![https://tinyurl.com/packhacks-cnn](https://tinyurl.com/packhacks-cnn)
 
 ---
 
