@@ -202,7 +202,7 @@ predictions = {
 ---
 
 ### Backprop
-*Forward Pass*: pass a training image ($24x24x3$) through network
+*Forward Pass*: pass a training image ($24\times24\times3$) through network
 
 - Network outputs a _prediction_ (class vector; initially bad)
 - Calculate _loss_ between prediction and reality (label)
