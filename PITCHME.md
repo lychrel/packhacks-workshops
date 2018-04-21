@@ -58,7 +58,7 @@ parameters!
 
 +++
 
-### CNN as Volumes
+### [CNN as Volumes](http://cs231n.github.io/convolutional-networks/)
 ![conv2](img/CONV2.jpeg)
 
 ---
