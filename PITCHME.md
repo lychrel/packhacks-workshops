@@ -63,7 +63,7 @@ parameters!
 
 ---
 
-### CNN LAYERS
+# CNN LAYERS
 
 ![Press Down Key](img/down-arrow.png)
 +++
@@ -100,25 +100,61 @@ parameters!
 
 ---
 
-### PROBLEM: MNIST Digit Classification
+# PROBLEM: MNIST Digit Classification
 
 ---
 
-### Image Input for SoftMax
+# Implementation
 
-![flatten](img/fimg.png)
+![Press Down Key](img/down-arrow.png)
++++
+
+### Keras
+- high-level neural network API
+- supports multiple backends (including TensorFlow)
+- Tensorflow is
+### Tensorflow
+- Google's (now open-source) Machine Learning framework
 
 ---
 
-### Implementation
+## Layers in Keras
+![Press Down Key](img/down-arrow.png)
++++
+
+### Input
+```python
+input_layer = tf.reshape(features["x"], [-1, 28, 28, 1])
+```
+
+![Press Down Key](img/down-arrow.png)
++++
+### Convolutional
+
+```python
+conv1 = tf.layers.conv2d(
+      inputs=input_layer,
+      filters=32,
+      kernel_size=[5, 5],
+      padding="same",
+      activation=tf.nn.relu)
+```
+
 
 ---
 
 ## Training
 
+![Press Down Key](img/down-arrow.png)
++++
+
+### Loss Function and Learning
+
 ---
 
 ## Hyperparameter Optimization
+- training: batch size, number of epochs, learning rate, learning optimizer
+- architecture: kernel size/shape, number of layers,
 
 ---
 
