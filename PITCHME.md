@@ -195,20 +195,51 @@ predictions = {
 1. *Forward Pass*: pass a training image ($24x24x3$) through network
     - Network outputs a _prediction_ (class vector; initially bad)
     - Calculate _loss_ between prediction and reality (label)
+
+![Press Down Key](img/down-arrow.png)
++++
+
 2. Find $dL/dW$ (how loss changes with weights)
+
+![Press Down Key](img/down-arrow.png)
++++
+
 3. *Backward Pass*: finding the weights that contributed _the most_ to the total loss and determining how to change them to decrease loss
+
+![Press Down Key](img/down-arrow.png)
++++
+
 4. *Weight Update*: Update all filter weights in the _opposite direction_ of loss gradient $dL/dW$
 
 ---
 
-### Loss Function and Learning
-- example loss functions: MSE, RMS
+## Important Learning Parameters
+- *loss function*: how to quantify difference between prediction and reality
+- *learning rate*: how much to update weights when traversing the loss gradient
+- *epoch*: passing the entire dataset through the network once (generally split into batches)
+- *batch*: a subset of the dataset fed into the neural network at once
+- *iterations*: number of batches needed to complete an epoch
+
+![Press Down Key](img/down-arrow.png)
++++
+
+### Example:
+
+For 2000 training images, split into _batches_ of 500, it will take 4 _iterations_ to complete one _epoch_.
 
 ---
 
 ## Hyperparameter Optimization
-- training: batch size, number of epochs, learning rate, learning optimizer
-- architecture: kernel size/shape, number of layers,
+- _training_: batch size, number of epochs, learning rate, learning optimizer
+- _layer_: kernel size/shape, stride, padding, weight initializations, activation functions
+- _architecture_: number of layers, dropout methods/values
+
+---
+
+## Hyperparameter Optimization Methods
+- Grid Search
+- Random Search
+![search](img/searches.png)
 
 ---
 
