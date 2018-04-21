@@ -8,13 +8,17 @@ with Keras
 
 ![Press Down Key](img/down-arrow.png)
 +++
-Smaller image (CIFAR-10):
+### Smaller image (CIFAR-10):
 
-$32\times 32\times 3 = 3072$ parameters per neuron (first layer)
+$32\times 32\times 3 = 3072$ parameters per neuron
 
-Larger image (most stuff):
+(in the first layer)
 
-$200\times 200\times 3 = 120,000$ parameters!
+### Larger image (most stuff):
+
+$200\times 200\times 3 = 120,000$
+
+parameters!
 
 ![Press Down Key](img/down-arrow.png)
 +++
@@ -25,12 +29,13 @@ $200\times 200\times 3 = 120,000$ parameters!
 ![Press Down Key](img/down-arrow.png)
 +++
 
-- computationally expensive, prone to overfitting
+- computationally expensive
+- prone to overfitting
 
 ---
 
 ## CNN Inspiration:
-###the Visual Cortex
+### the Visual Cortex
 - Regions of cells are sensitive to specific _regions_ of the visual field
 - neurons in these regions only fire in presence of specific _features_: vertical, horizontal, or diagonal edges, etc.
 
@@ -46,29 +51,47 @@ $200\times 200\times 3 = 120,000$ parameters!
 
 +++
 
+### CNN as Layers
 ![conv1](img/CONV1.jpeg)
 
 ![Press Down Key](img/down-arrow.png)
 
 +++
 
+### CNN as Volumes
 ![conv2](img/CONV2.jpeg)
 
 ---
 
+### CNN LAYERS
+
+![Press Down Key](img/down-arrow.png)
++++
+
 ## Convolutional Layers
+- Slide filters across image --> activation maps of image responses to filters
+- Learn a set of filters appropriate to the problem
 
----
+![Press Down Key](img/down-arrow.png)
++++
 
-## Activation Layers
+## ReLu (Rectified Linear Units)
+- Often follow convolutional layers
+- Add nonlinearity to the net (e.g. changing all negative activations to 0)
 
----
+![Press Down Key](img/down-arrow.png)
++++
 
 ## Pooling Layers
+- "Downsampling the data"
+- Reduce spatial size of representation to cut down computation and number of parameters (also controls overfitting)
 
----
+![Press Down Key](img/down-arrow.png)
++++
 
-## Dense & Classification Layers
+## Dense (Fully-Connected) Layers
+- Often at the end of the CNN
+- Used for classification
 
 ---
 
@@ -78,6 +101,8 @@ $200\times 200\times 3 = 120,000$ parameters!
 ---
 
 ### PROBLEM: MNIST Digit Classification
+
+---
 
 ### Image Input for SoftMax
 
