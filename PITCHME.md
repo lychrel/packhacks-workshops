@@ -7,12 +7,16 @@ with Keras
 - Image inputs
 
 ![Press Down Key](img/down-arrow.png)
-
 +++
+small image:
+$$32\times 32\times 3 = 3072$$ parameters per neuron (first layer)
+$$200\times 200\times 3 = 120,000$$ parameters!
 
-$$200\times 200\times 3 = 120,000$$
-
-parameters per neuron (in the first layer!)
+![Press Down Key](img/down-arrow.png)
++++
+![gavin][img/gavin.png]
+- computationally expensive
+- prone to overfitting
 
 ---
 

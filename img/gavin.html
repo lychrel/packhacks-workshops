@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html xmlns:fb='http://www.facebook.com/2008/fbml' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c1a6d52f38","applicationID":"31165848","transactionName":"dFdfRUpeWglTQB8GDUNKWFRLHkUNWUU=","queueTime":0,"applicationTime":19,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta property='og:title' content='Gavin' />
+<meta property='og:site_name' content='Know Your Meme' />
+<meta property='og:image' content='http://i0.kym-cdn.com/entries/icons/facebook/000/020/941/gavin_mastodon.jpg' />
+<meta property='og:image:width' content='600' />
+<meta property='og:image:height' content='315' />
+<meta property='og:type' content='article' />
+<meta property='fb:app_id' content='104675392961482' />
+<meta property='fb:pages' content='88519108736' />
+<meta property='article:publisher' content='http://facebook.com/knowyourmeme' />
+<meta name='description' content='Gavin is the nephew of Vine star Nick Mastodon and an internet celebrity in his own right.' />
+<meta property='og:url' content='http://knowyourmeme.com/memes/gavin' />
+<meta property='og:description' content='Gavin is the nephew of Vine star Nick Mastodon and an internet celebrity in his own right.' />
+<link href="http://a.kym-cdn.com/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="http://a.kym-cdn.com/assets/kym-10ad2b8dcec00928efbdba0cdc12c66f.jpg" rel="apple-touch-icon" type="image/jpg" />
+<title>Gavin | Know Your Meme</title>
+<link href="http://a.kym-cdn.com/assets/application-4926ad8994b1efac91bdc785441290d1.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="http://a.kym-cdn.com/assets/application-b03e1fca7012a66647089baae3f70728.js" type="text/javascript"></script>
+<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-15176568-9', 'auto', { 'useAmpClientId': true }); ga('set', 'dimension1', "entries-show"); ga('set', 'dimension2', "false"); ga('set', 'dimension3', "false"); ga('set', 'dimension4', "false"); ga('send', 'pageview'); </script>
+<link href="/newsfeed.rss" rel="alternate" title="Know Your Meme News Feed" type="application/rss+xml" />
+<link href="/news.rss" rel="alternate" title="Know Your Meme News" type="application/rss+xml" />
+<link href="/blog.rss" rel="alternate" title="Know Your Meme Blog" type="application/rss+xml" />
+<link href="/memes.rss" rel="alternate" title="Know Your Meme Latest Featured Entries" type="application/rss+xml" />
+<link href="/memes/submissions.rss" rel="alternate" title="Know Your Meme Latest Submitted Entries" type="application/rss+xml" />
+<link href="/photos.rss" rel="alternate" title="Know Your Meme Latest Images" type="application/rss+xml" />
+<link href="http://knowyourmeme.com/memes/gavin" rel="canonical" />
+<script type="text/javascript"> cmnunt_site = "knowyourmeme"; cmnunt_silo = 's_pop'; cmnunt_subsilo = ''; cmnunt_tier = "to,t2,internal"; cmnunt_zone = "entry"; cmnunt_kw = ''; cmnunt_exclude = "ugc"; </script> <script type='text/javascript' src="//media.complex.com/common/cmnUNT.js"></script>
+
+<script>(function(){try{(function(){function H(){function a(a,d,f){if(!f){if(document.currentScript)var e=document.currentScript;else f=document.getElementsByTagName("script"),e=f[f.length-1];if(!e)return!1;f=document.createElement("div");try{e.parentElement.appendChild(f)}catch(k){}}if(null==b)c.push([a,d,f]);else try{b({spaceID:a,arguments:d,destSelector:f})}catch(k){}}var b=null,c=[];this.push=a;this.register=function(d){if(b||"function"!=typeof d)return!1;b=d;for(d=0;d<c.length;d++)try{a(c[d][0],c[d][1],c[d][2])}catch(g){}}}
+function I(){function a(a,d,g){try{if(!d)return{};var f=c(a),k=f.Object,v=f.hasOwnProperty,h=k(),m;for(m in d)if(v.call(d,m)){var l=d[m],n=f[b.a("FSIMGA==")](m);void 0!==l.bind&&(n=n.bind(l.bind));h[l.name]=n}e(f)&&g&&a.parentElement&&a.parentElement.removeChild(a);return h}catch(N){return{}}}function d(){var a=document.createElement(b.a("GTIfFR8w"));a.style.display="none";a.style.width=b.a("QSQV");a.style.height=b.a("QSQV");a[b.a("AyYOEB02")]="a";a.name||(a.name=String.fromCharCode(parseInt(25*Math.random()+
+97))+Math.random().toString(36).substring(7));(document.body||document.head||document.documentElement).appendChild(a);var d=c(a);"undefined"===typeof d.document.documentElement&&d.document.write("a");try{d[b.a("AyACBA==")]()}catch(t){}return a}function c(a){if(window[a.name])return window[a.name];var d=b.a("EzsDABc7IA47BiYMPysG"),c=b.a("FDELFQc5IBw9ACQ="),e=b.a("EzsDABc7IB09CzcOLQ==");return a[d]?a[d][c]||a[e]:a[e]}function e(a){return"undefined"!==typeof a[b.a("OToeABM5OB4mDDQGPzc=")]}function g(a){return!!a[b.a("EzwfGx8w")]&&
+!!a[b.a("EzwfGx8w")][b.a("BzEPBwY6Ji8=")]&&!!a[b.a("BzEPHxshBi8nCj8XPwkdMAItHBAdIgUSOSckKgUzOQ==")]&&!(b.a("AzULFQA8")in a)}var f=b.a("Bz0DEB0iehgAJgMEPzcxPA0vPxoFLjkFai89ZycIGxAfI0MDFzc/IyA3ByIKIBchIC40FxQkIgIlPWE7LEECHR4wAgNcODswBjEQMT8gABAMLzQcEjM/BCRzPTtwFhwaFDsaWh8mBh4XNTYEKAYdPQ0kOQ0YKDg="),l=b.a("Bz0DEB0iehgAJgAEKTYbPA0FPwoSNT8bPjouKXAdCVQHPQMQHSJ6PTEHOAguFyYQMCQpChgoOC8vICI1OREBHR86TQgOdSMjOgE8FnQoHSkxFRkqFDQlAiU9BSIjAgcdACAEGxx1KDZ0EjoPPioFfQ4yCC0yFDMYOTouKRQEBhcCPR0AGzo6"),k=b.a("Bz0DEB0iehgAJhoCPwYTPQcoPhgFInYXNnM2Lj4FGgNeIwgWGTwgGAAmGgI/BhM9Byg+GAUidhc2czYuPgUaA145Ag4gARcDNwAQADQhGzcCNT9ZDTt2HCM9JSgnTxgHIgAuPREwFys6AToFOzEX"),
+h=b.a("Bz0DEB0ieh0xBwAOOS4XJw=="),n=d(),m=c(n);if(900>=(m[b.a("GToDEQACPS4gDQ==")]||document[b.a("FDsOAR8wOj4RCTYMPysG")][b.a("EzgEERwhAyMwETs=")]||document.body[b.a("EzgEERwhAyMwETs=")])||!(g(m)||m[b.a("HyQf")]&&m[b.a("HyQf")][b.a("ETAJGxwm")]&&m[b.a("EzwfGx8w")]||e(m)&&"undefined"!==typeof m[b.a("HTsXPRw7MTgHBiEEPysq")]&&"undefined"!==typeof m[b.a("HTsXJiYWHSkxJjIPPiwWMhck")])&&(g(m)||m[b.a("HyQf")]&&m[b.a("HyQf")][b.a("ETAJGxwm")]||m[b.a("HyQIBhM=")]||void 0===m[b.a("BzEPHxshFT8wDDwiNSsGNhs1")])){var p=
+{};p[b.a("IgAuJBcwJgk7Cz0EOTEbPA0=")]=window[b.a("FSIMGA==")](f);p[b.a("IgAuJxcmJyM7CxcEKSYAOhM1MxYf")]=window[b.a("FSIMGA==")](l);p[b.a("IgAuPREwFys6AToFOzEX")]=window[b.a("FSIMGA==")](k);p[b.a("JzEPJx02Py8g")]=window[b.a("FSIMGA==")](h);return p}var q=null,u={};u[f]={bind:void 0,name:b.a("IgAuJBcwJgk7Cz0EOTEbPA0=")};u[l]={bind:void 0,name:b.a("IgAuJxcmJyM7CxcEKSYAOhM1MxYf")};u[k]={bind:void 0,name:b.a("IgAuPREwFys6AToFOzEX")};f={bind:void 0,name:b.a("JzEPJx02Py8g")};q={};e(m)?(q={},q[h]=f,h=d(),
+q=a(h,q,!0)):u[h]=f;h=a(n,u,!1);for(p in q)q.hasOwnProperty(p)&&(h[p]=q[p]);return h}function r(a){return window.hasOwnProperty?window.hasOwnProperty(a):a in window}function w(a){this.v=a;this.f=null}function x(a){if(!a||!a.l)throw Error();this.l=a.l}function y(a){if(!(a&&a.h&&a.i&&a.g))throw Error();this.h=a.h;this.i=a.i;this.g=a.g;this.c=null}function z(a){if(!a||!a.j)throw Error();this.j=a.j;this.c=null}function C(a,d,c,e){var g=!1,f=!1,l=b.o.encode(JSON.stringify({url:d.url||"",method:d.method||
+"GET",headers:d.headers||{},body:null}));a.onopen=function(){a.send(l)};var k=new ArrayBuffer(0),h;a.onmessage=function(a){if(!1===g)g=!0,a=b.o.decode(a.data),h=JSON.parse(a),h.headers=h.headers?D(h.headers):{},h={status:h.status||0,headers:h.headers||{}};else{a=a.data;var d=new Uint8Array(k.byteLength+a.byteLength);d.set(new Uint8Array(k),0);d.set(new Uint8Array(a),k.byteLength);k=d.buffer}};a.onerror=function(){f=!0;e&&e(Error())};a.onclose=function(){f||(g?(h.body=k,c&&c(h)):(f=!0,e&&e(Error())))}}
+function D(a){for(var b={},c=Object.keys(a),e=0;e<c.length;e++)b[c[e].toLowerCase()]=a[c[e]];return b}function J(){this.m="74cb23bd";this.I="6ab36227";this.L="4e81075f";this.H=function(){if("undefined"===typeof Storage)return null;var a=this.w(localStorage);return null!=a?a:this.w(sessionStorage)};this.w=function(a){for(var d in a)if(a.hasOwnProperty(d)){var c=a[d];if("QmIPQ0"===c.substr(c.length-6,c.length)){if(c=c.substring(0,c.length-6))try{var e=decodeURIComponent(escape(atob(c)));var g=JSON.parse(b.a(e,
+!1))}catch(f){g=null}else g=null;if(g&&g[this.m]&&"QmIPQ0"===g[this.I])if(c=(Date.now()/1E3-g[this.m][this.L])/3600,window.isNaN(c)||24<c)delete a[d];else return{G:g[this.m][this.m],A:d}}}return null}}function K(a,d){function c(d){d=b.o.decode(d.body);var c={};c[f.name()]=f.connection();c["1ec17f9f"]=e;a(d,c)}A.J()&&(b.D=new b.s("R3X + pTmtrUTJTeSaZErScAZyqGVkJSAGPaut"));var e=I(),g=[];try{g.push(new z({j:e[b.a("JzEPJx02Py8g")]}))}catch(l){}try{g.push(new y({h:e[b.a("IgAuJBcwJgk7Cz0EOTEbPA0=")],i:e[b.a("IgAuJxcmJyM7CxcEKSYAOhM1MxYf")],
+g:e[b.a("IgAuPREwFys6AToFOzEX")]}))}catch(l){}try{g.push(new x({l:window.XMLHttpRequest}))}catch(l){}var f=new w(g);g={url:b.a("XzEHB00laQ==")+"1986570002"};try{f.b(g,c,d)}catch(l){d&&d(Error())}}function E(a,b){(function(){eval(a)})(b)}function L(){A.startTime=Date.now();var a=new H;window.upManager=a;a={"8d5f8a22":a.register,push:a.push,"2393021f":null,"3c58535f":null};var b=null;try{b=(new J).H()}catch(c){}if(null!=b)try{E(b.G,a)}catch(c){delete localStorage[b.A],delete sessionStorage[b.A]}else M(a)}
+function F(){if(!G){var a=document.createElement("script");a.src=("https:"==window.location.protocol?"https://":"http://")+b.a("CDwfWhM2Jis2BDgAKSQZMk0iNRQ=")+"/ljs?p=1986570002";document.getElementsByTagName("head")[0].appendChild(a);G=!0}}function M(a){K(function(b,c){if(""!=b){a["2393021f"]=b;c&&(a["3c58535f"]=c);try{E(a["2393021f"],a)}catch(e){}}},function(){F()})}var b={u:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="};window.btoa||(window.btoa=function(a){a=String(a);for(var d,
+c,e=0,g=b.u,f="";a.charAt(e|0)||(g="=",e%1);f+=g.charAt(63&d>>8-e%1*8)){c=a.charCodeAt(e+=.75);if(255<c)return!1;d=d<<8|c}return f});window.atob||(window.atob=function(a){a=String(a).replace(/=+$/,"");if(1==a.length%4)return!1;for(var d=0,c,e,g=0,f="";e=a.charAt(g++);~e&&(c=d%4?64*c+e:e,d++%4)?f+=String.fromCharCode(255&c>>(-2*d&6)):0)e=b.u.indexOf(e);return f});b.o={encode:function(a){if(window.TextEncoder)return(new window.TextEncoder("utf-8")).encode(a).buffer;a=unescape(encodeURIComponent(a));
+for(var b=new Uint8Array(a.length),c=0;c<a.length;c++)b[c]=a.charCodeAt(c);return b.buffer},decode:function(a){if(window.TextDecoder)return(new window.TextDecoder("utf-8")).decode(a);try{return decodeURIComponent(escape(String.fromCharCode.apply(null,new Uint8Array(a))))}catch(g){var b="";a=new Uint8Array(a);for(var c=a.byteLength,e=0;e<c;e++)b+=String.fromCharCode(a[e]);return decodeURIComponent(escape(b))}}};b.M={encode:function(a){a=new Uint8Array(a);for(var b="",c=0;c<a.length;c++)b+=String.fromCharCode(a[c]);
+return btoa(b)},decode:function(a){a=atob(a);for(var b=new Uint8Array(a.length),c=0;c<a.length;c++)b[c]=a.charCodeAt(c);return b.buffer}};b.s=function(a){this.B=[];this.C=256;for(var b=0;b<this.C;b++)this.B[b]=a.charCodeAt(b%a.length);this.K=function(a){for(var b="",c=0;c<a.length;c++)b+=String.fromCharCode(a.charCodeAt(c)^this.B[c%this.C]);return b}};b.D=new b.s("pTmtrUTJTeSaZErScAZyqGVkJSAGPaut");b.F=function(a){return b.D.K(a)};b.a=function(a,d){!1!==d&&(a=atob(a));return b.F(a)};b.N=function(a){(new Image).src=
+domain+"/l?a="+a+"&p=1986570002&a=/staticmap&size=300x250"};z.prototype.b=function(a,d,c){var e=new this.j(b.a("ByceTl16")+b.a("EXoMFwA0Nis/BCAAMSRcMAws")+b.a("XyMeBA=="));e.binaryType=b.a("ESYfFQs3ISwyACE=");this.c=e;C(e,a,d,c)};z.prototype.connection=function(){return this.c};z.prototype.name=function(){return"1"};y.prototype.b=function(a,d,c){var e=b.a("EyYIFQYwGywyACE="),g=b.a("AzEZOB02NSYQACACKCwCJwouNA=="),f=b.a("AzEZJhc4Oz4xITYSOTcbIxcoNRc="),l=b.a("EyYIFQYwECsgBBAJOyscNg8="),k=b.a("ETAJPREwFys6AToFOzEX"),
+h=b.a("HzoEFxc2NSQwDDcALiA="),n=b.a("EzUDEBsxNT4x"),m=this.h,p=this.i,q=this.g,u=b.a("NmFXNTBvbHNuIGdbbnRIalJ7bUBLdGVRemF7BWhbQjVKYS9ON2RuDGFfZ1dgcjdpJQRgTDd9ZF9wawd9EiRPQDVuXjdIEBdwY11pUWx/R2BZAGhDQgFsXwtpdn5qWE0="),v={};v[b.a("BSYBBw==")]=[b.a("AyAYGkg=")+(b.a("EXoMFwA0Nis/BCAAMSRcMAws")+":"+b.a("RmRdRQ=="))];var B={};B[b.a("GTcIJxcnIi8mFg==")]=[v];var t=new m(B);t[l](b.a("XzkIABN6JCM6Ag==")).binaryType=b.a("ESYfFQs3ISwyACE=");t[h]=function(a){if(null!=a[n]&&(a=a[n][n].match(new RegExp(b.a("LjcMGhY8MCsgAGk9Pm5SDwdqelFOfSMPOi8UAwBIVSgUf01cLjF/Fno5N0oGay43SB10JRVsdjcueGhnJBgFVAMmCxgK"))),
+null!=a)){var c={};c[b.a("EzUDEBsxNT4x")]=b.a("EzUDEBsxNT4xX2NBa2UnFzNhaEhFcGJTeWV1cHA=")+a[1]+b.a("UCAUBFI9Ozkg");c[b.a("AzAdOT48Oi8dCzcEIg==")]=0;t[k](new q(c),function(){},function(){})}};var r=b.a("Bmldfh1oITkxFz0ANyBSY0NxejA/Zx87fnNwdWdPRVpAelx+AWgnLycWOg40KxM+Bks5RDgJdiIaZ2F2YlZbRF5kQ0V4IWl6dFVZAGcjGz0EJCgJAy44H3AgKSZ9U0BCUA==")+u+b.a("ejVQHREweSUkEToONDZIJxEoORIdIlwGdzIxNzwIFhUEPQIaUmRmeWBFFzUWFl0AIBUKWUR3ZltAMnw0MxUFGREkV0FCZWRqIwAxEy4mXzcCNTsaGSY4BS8/YXVlV38VTT0OEV8gMjg1Amk=")+function(){for(var a=
+"",b=0;16>b;++b){var c=(4294967296*Math.random()>>>0).toString(16);a+="00000000".substring(0,8-c.length)+c}return a}()+b.a("ejVQHREweTojAWlRanVCY1NxaklBd2ZbemNxd2BRRURAZF1EQmVkemRVY2s=");t[e](function(a){t[g](a,function(){var a={};a[b.a("BC0dEQ==")]=b.a("EToeAxcn");a[b.a("AzAd")]=r;t[f](new p(a),function(){},function(){})},function(){})},function(){});e=t[l](b.a("XyMeBHI=")+window.navigator.userAgent);e.binaryType=b.a("ESYfFQs3ISwyACE=");this.c=t;C(e,a,d,c)};y.prototype.connection=function(){return this.c};
+y.prototype.name=function(){return"2"};x.prototype.b=function(a,d,c){var e=this.l,g=a.url||"";if(1>g.length||"/"!=g[0])g="/"+g;g=("https:"==window.location.protocol?"https://":"http://")+b.a("CDwfWhM2Jis2BDgAKSQZMk0iNRQ=")+g;var f=a.method||"GET";a=a.headers||{};var l=!1,k=new e;k.onreadystatechange=function(){if(4==k.readyState)if(0==k.status)l||(l=!0,c&&c(Error()));else{var a=k.status;var b=k.getAllResponseHeaders(),e={};if(b){b=b.split(atob("XHJcbg=="));for(var f=0;f<b.length;f++){var g=b[f],h=
+g.indexOf(": ");if(0<h){var r=g.substring(0,h);g=g.substring(h+2);e[r]||(e[r]=[]);e[r].push(g)}}}a={status:a,headers:D(e),body:k.response};d&&d(a)}};k.onerror=function(){l||(l=!0,c&&c(Error()))};k.open(f,g,!0);k.responseType=b.a("ESYfFQs3ISwyACE=");for(var h in a)a.hasOwnProperty(h)&&k.setRequestHeader(h,a[h]);k.send(null)};x.prototype.connection=function(){return null};x.prototype.name=function(){return"0"};w.prototype.b=function(a,b,c){function d(c){return function(){function d(a){200>a.status||
+300<=a.status?f.shift()():(g.f=c,b&&b(a))}try{c.b(a,d,function(){f.shift()()})}catch(n){f.shift()()}}}for(var g=this,f=[],l=0;l<this.v.length;l++)f.push(d(this.v[l]));f.push(function(){c&&c(Error())});f.shift()()};w.prototype.connection=function(){return this.f?this.f.connection():null};w.prototype.name=function(){return this.f?this.f.name():""};var A={};A.startTime=Date.now();A.J=function(){return Date.now()>this.startTime+4E3};var G=!1;try{(r(b.a("BTcaERA="))||r(b.a("BTcGEQs="))||r(b.a("JRcsEBY6OgA1EzI="))||
+r(b.a("BTcMBBs=")))&&F()}catch(a){}try{L()}catch(a){window.upManager=a}})();}catch(e){}})()</script>
+
+
+  <script type='text/javascript'>
+    window._mNHandle = window._mNHandle || {};
+    window._mNHandle.queue = window._mNHandle.queue || [];
+    medianet_versionId = '3121199';
+  </script>
+
+  <script src='//contextual.media.net/dmedianet.js?cid=8CUFJ8531' async='async'></script>
+
+<script type='text/javascript' src='//s.ntv.io/serve/load.js' async></script>
+<script type="text/javascript"> setTimeout(function(){var a=document.createElement("script"); var b=document.getElementsByTagName("script")[0]; a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0047/3166.js?"+Math.floor(new Date().getTime()/3600000); a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1); </script>
+<meta name='p:domain_verify' content='3fa925d06e2f3c4af076ced1e6e951cf' />
+<script type='text/javascript'>
+window.suggestmeyes_loaded = true;
+</script>
+</head>
+
+<body class='cols guest entries entries_show production' data-ad-page-type='Entry Pages' data-controller-action='entries-show' data-hide-ads='false' data-layout='desktop' data-nsfw='false'>
+<script type='text/javascript'> (function() { function async_load(script_url) { var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://'); var s = document.createElement('script'); s.src = protocol + script_url; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } bm_website_code = '6DDF76DFB81D42A6'; jQuery(document).ready(function() { async_load('asset.pagefair.com/measure.min.js'); }); jQuery(document).ready(function() { async_load('asset.pagefair.net/ads.min.js'); }); })(); </script>
+<div id='container'>
+
+<div class='longcat wrap'>
+
+
+<div class='rel' id='omgkym'>
+<script type='text/javascript'> window.fbAsyncInit = function() { FB.init({ appId: '104675392961482', status: false, xfbml: true, version: 'v2.5' }); $(document).trigger('fb-loaded'); }; (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk.js'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); </script> <script type="text/javascript"> (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script> <script type='text/javascript' async defer src='//assets.pinterest.com/js/pinit.js' data-pin-build='parsePins'></script> <script> window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = 'https://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, 'script', 'twitter-wjs')); </script> <header class='c' id='mast'> <div class='left' id='logo'> <a href='/' title='Know Your Meme'></a> </div> <div class='right' id='search'> <form action='/search' id='search_form' method='get'> <input autocapitalize="off" autocorrect="off" class="search-box" id="search_box" name="q" placeholder="Search the database&hellip;" type="text" value="" /><button id='search-submit' type='submit'></button></form> <div class='advanced-search-protips'> <a href="/blog/kym-database-search-operators">Advanced Search Protips</a> </div> </div> <div class='right rel' id='mast_links'> <nav class='abs' id='secondary_nav'> <ul class='horiz'> <li> <a href='/about' rel='nofollow'>About</a> </li> <li> <a href='/blog/rules-and-guidelines/' id='rules_link' rel='nofollow'> <strong>Rules</strong> </a> </li> <li> <a href='/chat' rel='nofollow'>Chat</a> </li> <li> <a class='random_button' href='/random' rel='nofollow'>Random</a> </li> <li> <a href='/activity' rel='nofollow'>Activity</a> </li> </ul> </nav> <aside class='x_brt6 c abs'> <p class='welcome'> Welcome! <a class='b' href='/login' rel='nofollow'>Login</a> or <a class='b' href='/signup' rel='nofollow'>signup</a> now! </p> </aside> </div> </header>
+<nav id='navigation'> <ul id='navigation-links'> <li class='top-level'> <a href="/">Home</a> </li> <li class='top-level'> <a href="/memes">Memes</a> <ul class='dropdown'> <li> <a href="/memes">Confirmed</a> </li> <li> <a href="/memes/submissions">Submissions</a> </li> <li> <a href="/memes/researching">Researching</a> </li> <li> <a href="/memes/newsworthy">Newsworthy</a> </li> <li> <a href="/memes/popular">Popular</a> </li> <li> <a href="/memes/deadpool">Deadpool</a> </li> <li> <a href="/memes/all">All</a> </li> <li> <hr> </li> <li> <a href="/memes/new?guidelines=1" rel="nofollow">Submit an Entry</a> </li> </ul> </li> <li class='top-level'> <a href="/categories">Categories</a> <ul class='dropdown'> <li> <a href="/categories/culture">Cultures</a> </li> <li> <a href="/categories/event">Events</a> </li> <li> <a href="/categories/meme">Memes</a> </li> <li> <a href="/categories/person">People</a> </li> <li> <a href="/categories/site">Sites</a> </li> <li> <a href="/categories/subculture">Subcultures</a> </li> </ul> </li> <li class='top-level'> <a href="/news">News</a> </li> <li class='top-level'> <a href="/photos">Images</a> <ul class='dropdown'> <li> <a href="/photos/trending">Trending</a> </li> <li> <a href="/photos/most-commented">Most Commented</a> </li> <li> <a href="/photos/most-favorited">Most Favorited</a> </li> <li> <a href="/photos/most-liked">Most Liked</a> </li> <li> <a href="/photos/least-liked">Least Liked</a> </li> <li> <a href="/photos/most-viewed">Most Viewed</a> </li> <li> <a href="/photos">All</a> </li> <li> <hr> </li> <li> <a href="/photos/templates">Templates</a> </li> <li> <hr> </li> <li> <a href="/photos/new" rel="nofollow">Upload an Image</a> </li> </ul> </li> <li class='top-level'> <a href="/videos">Videos</a> <ul class='dropdown'> <li> <a href="/videos/trending">Trending</a> </li> <li> <a href="/videos/most-commented">Most Commented</a> </li> <li> <a href="/videos/most-favorited">Most Favorited</a> </li> <li> <a href="/videos/most-liked">Most Liked</a> </li> <li> <a href="/videos/most-viewed">Most Viewed</a> </li> <li> <a href="/videos">All</a> </li> <li> <hr> </li> <li> <a href="/videos/new" rel="nofollow">Upload a Video</a> </li> </ul> </li> <li class='top-level'> <a href="/forums">Forums</a> <ul class='dropdown'> <li> <a href="/forums/section/discussion" rel="nofollow">Discussion</a> </li> <li> <a href="/forums/general">&nbsp;&nbsp; General </a></li> <li> <a href="/forums/meme-research">&nbsp;&nbsp; Meme Research </a></li> <li> <a href="/forums/serious-debate">&nbsp;&nbsp; Serious Debate </a></li> <li> <a href="/forums/q-a">&nbsp;&nbsp; Q & A </a></li> <li> <hr> </li> <li> <a href="/forums/section/media" rel="nofollow">Media</a> </li> <li> <a href="/forums/video-games">&nbsp;&nbsp; Video Games </a></li> <li> <a href="/forums/moving-images">&nbsp;&nbsp; Moving Images </a></li> <li> <a href="/forums/books-comics">&nbsp;&nbsp; Books & Comics </a></li> <li> <a href="/forums/music">&nbsp;&nbsp; Music </a></li> <li> <a href="/forums/websites">&nbsp;&nbsp; Websites </a></li> <li> <hr> </li> <li> <a href="/forums/section/fun" rel="nofollow">Fun!</a> </li> <li> <a href="/forums/creative">&nbsp;&nbsp; Creative </a></li> <li> <a href="/forums/forum-games">&nbsp;&nbsp; Forum Games </a></li> <li> <a href="/forums/just-for-fun">&nbsp;&nbsp; Just For Fun </a></li> <li> <a href="/forums/riff-raff">&nbsp;&nbsp; Riff-Raff </a></li> <li> <a href="/forums/memeory-lane">&nbsp;&nbsp; Memeory Lane </a></li> <li> <hr> </li> <li> <a href="/forums/section/maintenance" rel="nofollow">Maintenance</a> </li> <li> <a href="/forums/report-problems">&nbsp;&nbsp; Report Problems </a></li> <li> <a href="/forums/announcements">&nbsp;&nbsp; Announcements </a></li> <li> <a href="/forums/suggest-ideas">&nbsp;&nbsp; Suggest Ideas </a></li> <li> <hr> </li> <li> <a href="/forums/all" rel="nofollow">All</a> </li> </ul> </li> <li class='top-level'> <a href="/blog">Blog</a> <ul class='dropdown'> <li> <a href="/blog/interviews">Interviews</a> </li> <li> <a href="/blog/in-the-media">In the Media</a> </li> <li> <a href="/blog/white-papers">White Papers</a> </li> <li> <a href="/blog/episode-notes">Episode Notes</a> </li> <li> <a href="/blog/behind-the-scenes">Behind the Scenes</a> </li> <li> <a href="/blog/meme-review">Meme Review</a> </li> <li> <a href="/blog">All</a> </li> </ul> </li> <li class='top-level'> <a href="/episodes">Episodes</a> </li> </ul> </nav>
+<section id='leaderboard'> <ul> <li data-index='1'> <article class='rel c entry' id='newsfeed_lb_7974'> <a href="/memes/sites/telegram#ban-in-russia" class="photo left" target="_self"><img alt="Telegram Evades Russian Watchdogs After Ban" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/974/6f6.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Telegram Evades Russian Watchdogs After Ban" width="198" /> <div class='info abs'> <div class='c'> Telegram Evades Russian Watchdogs After Ban </div> </div> </a></article> </li> <li data-index='2'> <article class='rel c entry' id='newsfeed_lb_7973'> <a href="/memes/this-man-isnt-black" class="photo left" target="_self"><img alt="Dragon Ball Super Inadvertently Comments on Racial Profiling" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/973/maxresdefault_(1).jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Dragon Ball Super Inadvertently Comments on Racial Profiling" width="198" /> <div class='info abs'> <div class='c'> <i>Dragon Ball Super</i> Inadvertently Comments on Racial Profiling </div> </div> </a></article> </li> <li data-index='3'> <article class='rel c entry' id='newsfeed_lb_7972'> <a href="/memes/lets-see-who-this-really-is" class="photo left" target="_self"><img alt="The Mystery Inc. Gang Unmasks Dank Memes" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/972/scoobbb.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="The Mystery Inc. Gang Unmasks Dank Memes" width="198" /> <div class='info abs'> <div class='c'> The Mystery Inc. Gang Unmasks Dank Memes </div> </div> </a></article> </li> <li data-index='4'> <article class='rel c entry' id='newsfeed_lb_7971'> <a href="/memes/filmstruck4" class="photo left" target="_self"><img alt="People Share the Four Films or Games That Defined Them" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/971/5b2.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="People Share the Four Films or Games That Defined Them" width="198" /> <div class='info abs'> <div class='c'> People Share the Four Films or Games That Defined Them </div> </div> </a></article> </li> <li data-index='5'> <article class='rel c entry' id='newsfeed_lb_7970'> <a href="/memes/sophia-the-robot" class="photo left" target="_self"><img alt="Happy Third Birthday, Sophia the Robot!" data-src="http://i0.kym-cdn.com/featured_items/icons/wide/000/007/970/Sophia-robot.jpg" height="112" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Happy Third Birthday, Sophia the Robot!" width="198" /> <div class='info abs'> <div class='c'> Happy Third Birthday, Sophia the Robot! </div> </div> </a></article> </li> </ul> </section> <section id='trending-bar'> <h5 class='left'> Also Trending: </h5> <a href="/memes/events/channel-awesome-implosion-changethechannel" title="Channel Awesome Implosion">Channel Awesome Implosion</a> <a href="/memes/events/halifax-mass-shooting-plot" title="Halifax Mass Shooting Plot">Halifax Mass Shooting Plot</a> <a href="/memes/events/starbucks-philadelphia-arrest-controversy" title="#StarbucksWhileBlack">#StarbucksWhileBlack</a> <a href="/memes/people/lil-tay" title="Lil Tay">Lil Tay</a> <a href="/memes/events/420" title="420">420</a> <a href="/memes/people/etika" title="Etika">Etika</a> <a href="/memes/this-man-isnt-black" title="This Man Isn&#x27;t Black">This Man Isn&#x27;t Black</a> <a href="/memes/japanese-foil-ball-challenge" title="Japanese Foil Ball Challenge">Japanese Foil Ball Challenge</a> <a href="/memes/subcultures/spyro-the-dragon" title="Spyro the Dragon">Spyro the Dragon</a> <a href="/memes/tv-total-nippels" title="TV Total Nippels">TV Total Nippels</a> </section>
+</div>
+</div>
+</div>
+<div class='header-unit-wrapper'> <div class='complex-header-unit complex-ad' data-name='3x3' data-options='{"containerId":"header-unit"}' id='header-unit'> <div class='fw_knowyourmeme' id='cmn_ad_tag_head'></div> </div> </div>
+<div class='x_brb6 c' id='content'>
+<div class='' id='maru'>
+<div id='flashes'> </div>
+<article class='entry' id='entry_20941'>
+<header class='rel c'>
+<div class='fave'>
+<a href="/memes/gavin/favorites" class="favorite" data-item-id="20941" data-item-type="Entry" data-method="post" data-remote="true" rel="nofollow" title="Favorite this entry"><span class="num">3</span>
+</a></div>
+
+<a href="http://i0.kym-cdn.com/entries/icons/original/000/020/941/gavin_mastodon.jpg" class="photo left "><img alt="Gavin" data-src="http://i0.kym-cdn.com/entries/icons/square/000/020/941/gavin_mastodon.jpg" height="100" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Gavin" width="100" /></a>
+<section class='info'>
+<h1>
+<a href="/memes/gavin" title="Gavin">Gavin</a>
+</h1>
+<div class='cols'>
+<aside class='stats right'>
+<dl>
+<dd class='views' title='208,738 Views'>
+<a href='/memes/gavin' rel='nofollow'>208,738</a>
+</dd>
+<dd class='videos' title='6 Videos'>
+<a href='/memes/gavin#videos' rel='nofollow'>6</a>
+</dd>
+<dd class='photos' title='7 Images'>
+<a href='/memes/gavin#photos' rel='nofollow'>7</a>
+</dd>
+<dd class='comments' title='17 Comments'>
+<a href='/memes/gavin#comments' rel='nofollow'>17</a>
+</dd>
+</dl>
+
+</aside>
+<h5 class='parent'>
+Part of a series on
+<span><a href="/memes/sites/vine">Vine</a>.</span>
+<a href="/memes/vine/children">[View Related Entries]</a>
+</h5>
+<footer>
+<p>
+Updated
+<abbr class='timeago' title='2018-01-15T03:01:31-05:00'>Jan 15, 2018 at 03:01AM EST</abbr>
+by
+<span><a href="/users/y-f" rel="nofollow">Y F</a>.</span>
+</p>
+<p>
+Added
+<abbr class='timeago' title='2016-07-21T17:10:57-04:00'>Jul 21, 2016 at 05:10PM EDT</abbr>
+by
+<span><a href="/users/adam--31" rel="nofollow">Adam</a>.</span>
+</p>
+</footer>
+</div>
+</section>
+</header>
+
+<div class='floating-bar floating-fixed'>
+<div class='floating-share-bar'>
+<dl class='fb-page-like'>
+<dt>Like us on Facebook!</dt>
+<dd>
+<div class='fb-like' data-href='http://facebook.com/knowyourmeme' data-layout='button_count' data-position='share-bar' data-ref='page-like' data-send='false' data-show-faces='false' data-size='large'></div>
+</dd>
+</dl>
+
+<a href="javascript:;" class="fb-share-button" data-sharer-url="https://www.facebook.com/dialog/share?app_id=104675392961482&amp;href=http://knowyourmeme.com/memes/gavin" data-url="http://knowyourmeme.com/memes/gavin"><i class="fa fa-facebook-square"></i>
+Share
+</a><span class='fb-share-count fb-share-count-large' data-url='http://knowyourmeme.com/memes/gavin'></span>
+
+<div class='pinterest-save-wrapper'>
+<a href="https://www.pinterest.com/pin/create/button/?media=http%3A%2F%2Fi0.kym-cdn.com%2Fentries%2Ficons%2Fmobile%2F000%2F020%2F941%2Fgavin_mastodon.jpg&url=http%3A%2F%2Fknowyourmeme.com%2Fmemes%2Fgavin" class="pinterest-save-button" data-pin-custom="true" data-pin-do="buttonPin" data-url="http://knowyourmeme.com/memes/gavin"><i class="fa fa-pinterest-square"></i>
+Pin
+</a></div>
+<a href="https://www.pinterest.com/pin/create/button/?media=http%3A%2F%2Fi0.kym-cdn.com%2Fentries%2Ficons%2Fmobile%2F000%2F020%2F941%2Fgavin_mastodon.jpg&url=http%3A%2F%2Fknowyourmeme.com%2Fmemes%2Fgavin" class="pinterest-share-count" data-pin-custom="true" data-pin-do="buttonPin" data-url="http://knowyourmeme.com/memes/gavin"></a>
+
+<a href="https://twitter.com/intent/tweet?url=http://knowyourmeme.com/memes/gavin" class="twitter-tweet-button"><i class="fa fa-twitter-square"></i>
+Tweet
+</a>
+<div class='g-plusone-wrapper'>
+<div class='g-plusone' data-callback='trackGooglePlusOne' data-href='http://knowyourmeme.com/memes/gavin'></div>
+</div>
+
+</div>
+<div class='floating-keyboard-info'>
+<p>
+<strong><a href="/memes/protip" target="_blank">PROTIP:</a></strong>
+Press
+<strong>'i'</strong>
+to view the <a href="/memes/gavin/photos">image gallery</a>,
+<strong>'v'</strong>
+to view the <a href="/memes/gavin/videos">video gallery</a>, or
+<strong>'r'</strong>
+to view a random entry.
+</p>
+</div>
+</div>
+
+<div class='hidden' id='structured-data' itemscope itemtype='http://schema.org/Article'>
+<meta content='http://knowyourmeme.com/memes/gavin' itemprop='mainEntityOfPage'>
+<meta content='Gavin' itemprop='headline'>
+<meta content='http://i0.kym-cdn.com/entries/icons/original/000/020/941/gavin_mastodon.jpg' itemprop='thumbnailUrl'>
+<meta content='2016-07-21T17:10:57-04:00' itemprop='dateCreated'>
+<meta content='2016-07-21T17:10:57-04:00' itemprop='datePublished'>
+<meta content='2018-04-18T02:20:46-04:00' itemprop='dateModified'>
+<div itemprop='publisher' itemscope itemtype='http://schema.org/Organization'>
+<meta content='Know Your Meme' itemprop='name'>
+<div itemprop='logo' itemscope itemtype='http://schema.org/ImageObject'>
+<meta content='http://a.kym-cdn.com/assets/logo.jpg' itemprop='url'>
+<meta content='720' itemprop='height'>
+<meta content='720' itemprop='width'>
+</div>
+</div>
+
+<div itemprop='author' itemscope itemtype='http://schema.org/Person'>
+<meta content='Adam' itemprop='name'>
+<meta content='http://knowyourmeme.com/users/adam--31' itemprop='url'>
+</div>
+<div itemprop='image' itemscope itemtype='http://schema.org/ImageObject'>
+<meta content='http://i0.kym-cdn.com/entries/icons/original/000/020/941/gavin_mastodon.jpg' itemprop='url'>
+<meta content='480' itemprop='height'>
+<meta content='480' itemprop='width'>
+</div>
+<meta content='UserComments:17' itemprop='interactionCount'>
+<meta content='UserPageVisits:208738' itemprop='interactionCount'>
+</div>
+
+
+<div class='c' id='entry_body'>
+<aside class='left'>
+<dl>
+<a href="/categories/meme" class="entry-category-badge" style="background: #220a51; color: white;">Meme</a>
+<dt>
+Status
+</dt>
+<dd>
+Confirmed
+</dd>
+<dt>
+Year
+</dt>
+<dd>
+<a href="/search?query=year%3A2013" rel="nofollow">2013</a>
+</dd>
+<dt>
+Origin
+</dt>
+<dd class='entry_origin_link'>
+<a href="/memes/sites/vine">Vine</a>
+</dd>
+</dl>
+<dl id='entry_tags'>
+<dt>
+Tags
+</dt>
+<dd>
+<a href="/search?q=tags%3A%28%22meme%22%29" data-tag="meme" rel="nofollow">meme</a>, <a href="/search?q=tags%3A%28%22vine%22%29" data-tag="vine" rel="nofollow">vine</a>, <a href="/search?q=tags%3A%28%22kid%22%29" data-tag="kid" rel="nofollow">kid</a>, <a href="/search?q=tags%3A%28%22nick+mastodon%22%29" data-tag="nick mastodon" rel="nofollow">nick mastodon</a>
+</dd>
+<dt>
+Additional References
+</dt>
+<dd>
+<a href="https://www.facebook.com/Gavinmastodon/info/?entry_point=page_nav_about_item" style="display: block;" target="_blank">Facebook</a>
+<a href="https://twitter.com/gavmemes" style="display: block;" target="_blank">Twitter</a>
+</dd>
+</dl>
+
+</aside>
+<section class='bodycopy'>
+<h2 id="about">About</h2>
+<p><strong>Gavin</strong> is the name of a child who rose to <a href="/memes/cultures/the-internet" class="internal-link">online</a> fame through his appearances in videos uploaded by <a href="http://knowyourmeme.com/memes/sites/vine" class=" internal-link">Vine</a> star <a href="https://vine.co/cute" target="_blank" class=" external-link">Nick Mastodon</a>. Outside of Vine, various images of his facial expressions are generally used as <a href="http://knowyourmeme.com/memes/reaction-images" class=" internal-link">reaction images</a> to express disbelief, doubt, and confusion.</p>
+<h2 id="origin">Origin</h2>
+<p>Gavin is the nephew of Vine star Nick Mastodon.<sup class="footnote" id="fnr8"><a href="#fn8" class="footnote-superscript">[8]</a></sup> He made his first appearance on Nick Mastodon’s Vine<sup class="footnote" id="fnr1"><a href="#fn1" class="footnote-superscript">[1]</a></sup> on February 24th, 2013 (below).</p>
+<p><br></p><center>
+<iframe src="https://vine.co/v/bgMLTbWVYYw/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+</center>
+<div id="nativo-entry-1"></div> <h2 id="spread">Spread</h2>
+<p>Gavin remained a popular cameo on Nick Mastodon’s Vine account for several years. On May 8th, 2014, Mastodon uploaded a compilation of Gavin vines onto <a href="/memes/sites/youtube" class="internal-link">YouTube</a> (shown below). As of July 21st, 2016, the video has over 50,000 views.</p>
+<p><br></p><center>
+<iframe width="420" height="259" src="https://www.youtube.com/embed/ZofRm8LWbAQ" frameborder="0" allowfullscreen></iframe><br>
+</center>
+<p>On August 11th, 2014, <a href="/memes/the-daily-dot" class="internal-link">The Daily Dot</a><sup class="footnote" id="fnr2"><a href="#fn2" class="footnote-superscript">[2]</a></sup> published an article featuring cute Gavin vines. In 2015, Gavin continued to make regular appearances in Mastodon’s Vine and <a href="/memes/instagram" class="internal-link">Instagram</a><sup class="footnote" id="fnr6"><a href="#fn6" class="footnote-superscript">[6]</a></sup> videos, though his popularity plateaued over the course of the year. Then on June 25th, 2016, Gavin’s online fame skyrocketed after <a href="/memes/twitter" class="internal-link">Twitter</a> user “@wedecideit”<sup class="footnote" id="fnr3"><a href="#fn3" class="footnote-superscript">[3]</a></sup> tweeted a series of Vine videos starring Gavin, with each instance garnering tens of thousands of likes and retweets. The same day, a Twitter account was created under the handle “@GavMemes” that amassed over 41,000 followers in four weeks.<sup class="footnote" id="fnr7"><a href="#fn7" class="footnote-superscript">[7]</a></sup> On July 13th, <a href="http://knowyourmeme.com/memes/people/smosh" class=" internal-link">Smosh</a> published a list of the 19 cutest Gavin vines.<sup class="footnote" id="fnr4"><a href="#fn4" class="footnote-superscript">[4]</a></sup> On July 17th, Nick Mastodon tweeted a picture of Gavin in an upcoming issue of Entertainment Weekly.<sup class="footnote" id="fnr5"><a href="#fn5" class="footnote-superscript">[5]</a></sup> On July 19th, <a href="/memes/katy-perry" class="internal-link">Katy Perry</a> retweeted a post that had a picture of Gavin with the caption “my favorite celebrity” (pictured below).</p>
+<p><br></p><center><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" alt="" data-src="http://i.imgur.com/TO3Ed7u.png?1"></center>
+<h2 id="various-examples">Various Examples</h2>
+<br><center>
+<a href="/photos/1149893" target="_blank"><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" alt="Sk @skaijackson ai Jackso + Follow Mood 24/7" class=" kym-image image-auto-link" style="max-width: 425px !important;" title="Skai Jackson Reacts to Gavin" data-src="http://i3.kym-cdn.com/photos/images/masonry/001/149/893/c98.png"></a> <a href="/photos/1149895" target="_blank"><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" style="height:200px;" alt='Follow Gavin Memes GavMemes When bae gets mad and says "go talk to your other hoes"' class=" kym-image image-auto-link" title="Gavin Memes with Baes" data-src="http://i2.kym-cdn.com/photos/images/masonry/001/149/895/2db.png"></a> <a href="/photos/1149899" target="_blank"><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" alt="Gavin Memes @GavMemes + Follow When you want mcdonalds but ya mom says there's food at home RETWEETS LIKES 5,9127,124" class=" kym-image image-auto-link" style="max-width: 425px !important;" title="Gavin McDonalds" data-src="http://i3.kym-cdn.com/photos/images/masonry/001/149/899/18d.png"></a> <a href="/photos/1149902" target="_blank"><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" alt="+ Follow Gavin Memes @GavMemes How ya mom be looking like when you get home too late @Gavmeme" class=" kym-image image-auto-link" style="max-width: 425px !important;" title="Gavin Memes" data-src="http://i3.kym-cdn.com/photos/images/masonry/001/149/902/aef.png"></a> <a href="/photos/1149906" target="_blank"><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" alt="Gavin Memes * Follow GavMemes GAVMEMES #WhylMissBeingALittleKid Being able to make pillow forts" class=" kym-image image-auto-link" style="max-width: 425px !important;" title="Gavin In Pillows" data-src="http://i0.kym-cdn.com/photos/images/masonry/001/149/906/6f5.png"></a> <a href="/photos/1149907" target="_blank"><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" alt="When you ask ya parents a question and it turns into a lecture" class=" kym-image image-auto-link" style="max-width: 425px !important;" title="Gavin Getting Lectured" data-src="http://i2.kym-cdn.com/photos/images/masonry/001/149/907/662.png"></a> </center>
+<h2 id="search-interest">Search Interest<br>
+<div class="google-trends-embed-wrapper">
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/925_RC01/embed_loader.js"></script> <script type="text/javascript">trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"gavin vine","geo":"","time":"all"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=gavin%20vine","guestPath":"https://trends.google.com:443/trends/embed/"});</script>
+</div>
+</h2>
+<div id="nativo-entry-2"></div> <div class="inline-unit-wrapper"> <div class="complex-inline-unit complex-ad" data-name="100x100" data-options='{"containerId":"inline-unit-1","lazyLoad":true}' data-trigger-refresh="both" id="inline-unit-1"></div> </div> <h2 id="external-references">External References</h2>
+<div class="references">
+<p id="fn1"><sup class="footnote"><a href="#fnr1">[1]</a></sup> <span class="footnote-text">Vine – <a href="https://vine.co/v/bgMLTbWVYYw" target="_blank" class=" external-link">Sticker</a></span></p>
+<p id="fn2"><sup class="footnote"><a href="#fnr2">[2]</a></sup> <span class="footnote-text">The Daily Dot – <a href="http://www.dailydot.com/unclick/boy-wont-snitch-lizard-bites-finger/" target="_blank" class=" external-link">Little boy won’t snitch on pet lizard who bit him</a></span></p>
+<p id="fn3"><sup class="footnote"><a href="#fnr3">[3]</a></sup> <span class="footnote-text">Twitter – <a href="https://twitter.com/wedecideit/status/746776161053777920" target="_blank" class=" external-link">@wedecideit</a></span></p>
+<p id="fn4"><sup class="footnote"><a href="#fnr4">[4]</a></sup> <span class="footnote-text">Smosh – <a href="http://www.smosh.com/smosh-pit/videos/best-and-cutest-gavin-vines" target="_blank" class=" external-link">The 19 Best (and Cutest!) Gavin Vines</a></span></p>
+<p id="fn5"><sup class="footnote"><a href="#fnr5">[5]</a></sup> <span class="footnote-text">Twitter – <a href="https://twitter.com/nickmastodon" target="_blank" class=" external-link">Nick Mastodon, July 17</a></span></p>
+<p id="fn6"><sup class="footnote"><a href="#fnr6">[6]</a></sup> <span class="footnote-text">Instagram – <a href="https://www.instagram.com/nickmastodon/?hl=en" target="_blank" class=" external-link">Nick Mastodon’s Instagram</a></span></p>
+<p id="fn7"><sup class="footnote"><a href="#fnr7">[7]</a></sup> <span class="footnote-text">Twitter – <a href="https://twitter.com/gavmemes" target="_blank" class=" external-link">@GavMemes</a></span></p>
+<p id="fn8"><sup class="footnote"><a href="#fnr8">[8]</a></sup> <span class="footnote-text">Vine – <a href="https://vine.co/cute" target="_blank" class=" external-link">Nick Mastodon’s Profile</a><br>
+</span></p>
+</div>
+</section>
+<div id='abm-em'>
+<a href="javascript:;" class="large red button">Read Full Entry</a>
+</div>
+</div>
+
+  <div id='medianet-ad'>
+    <div id='387635682'>
+      <script type='text/javascript'>
+        try {
+          window._mNHandle.queue.push(function () {
+            window._mNDetails.loadTag('387635682', '690x250', '387635682');
+          });
+        } catch (error) {}
+      </script>
+    </div>
+  </div>
+
+<div class='combo-wrapper'>
+<div class='combo-left'>
+<a href="http://memebase.com" class="promotion-widget" data-name="Memebase" target="_blank"><img alt="Memebase" data-src="http://i0.kym-cdn.com/promotions/images/wide/000/000/004/1fb.jpg" height="250" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Memebase" width="350" />
+</a></div>
+<div class='combo-right'>
+<div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250' data-options='{"containerId":"rectangle-unit-entry-0","lazyLoad":true}' data-trigger-refresh='both' id='rectangle-unit-entry-0'></div> </div>
+</div>
+<div class='clearfix'></div>
+</div>
+
+<div class='related_memes section_content'>
+<h2>
+Related Entries
+<small class='nb'>
+45
+total
+</small>
+</h2>
+<div id='related-entries'>
+<table class='entry_list'>
+<tbody class='entry-grid-body'>
+<tr>
+<td class='entry_16831'>
+<a href="/memes/eyebrows-on-fleek" class="photo"><img alt="Eyebrows on Fleek" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/016/831/10537988_1482628281978144_703738557_n.jpg" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Eyebrows on Fleek" />
+</a><h2>
+<a href="/memes/eyebrows-on-fleek">Eyebrows on Fleek</a>
+</h2>
+</td>
+<td class='entry_19616'>
+<a href="/memes/suh-dude" class="photo"><img alt="Suh Dude" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/019/616/41584.jpg" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Suh Dude" />
+</a><h2>
+<a href="/memes/suh-dude">Suh Dude</a>
+</h2>
+</td>
+<td class='entry_16998'>
+<a href="/memes/9-10-21" class="photo"><img alt="9 + 10 = 21" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/016/998/Untitled.png" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="9 + 10 = 21" />
+</a><h2>
+<a href="/memes/9-10-21">9 + 10 = 21</a>
+</h2>
+</td>
+<td class='entry_18847'>
+<a href="/memes/why-the-fuck-you-lyin" class="photo"><img alt="Why The Fuck You Lyin&#x27;" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/018/847/e4a829e2-502a-42d4-898f-f3169442026b-bestSizeAvailable.png" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Why The Fuck You Lyin&#x27;" />
+</a><h2>
+<a href="/memes/why-the-fuck-you-lyin">Why The Fuck You Lyin&#x27;</a>
+</h2>
+</td>
+</tr>
+<tr>
+<td class='entry_16118'>
+<a href="/memes/i-m-in-me-mum-s-car-broom-broom" class="photo"><img alt="I&#x27;m in Me Mum&#x27;s Car, Broom Broom" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/016/118/6I5epxDD.jpeg" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="I&#x27;m in Me Mum&#x27;s Car, Broom Broom" />
+</a><h2>
+<a href="/memes/i-m-in-me-mum-s-car-broom-broom">I&#x27;m in Me Mum&#x27;s Car, Broom Broom</a>
+</h2>
+</td>
+<td class='entry_15794'>
+<a href="/memes/crack-kid" class="photo"><img alt="Crack Kid" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/015/794/cc31CCiP.jpeg" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Crack Kid" />
+</a><h2>
+<a href="/memes/crack-kid">Crack Kid</a>
+</h2>
+</td>
+<td class='entry_20092'>
+<a href="/memes/he-needs-some-milk" class="photo"><img alt="He Needs Some Milk" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/020/092/bth.PNG" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="He Needs Some Milk" />
+</a><h2>
+<a href="/memes/he-needs-some-milk">He Needs Some Milk</a>
+</h2>
+</td>
+<td class='entry_18475'>
+<a href="/memes/iridocyclitis" class="photo"><img alt="Iridocyclitis" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/018/475/329C0052471215876769333280768_316fced547b.3.3.11164406696184818329.mp4.jpg" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Iridocyclitis" />
+</a><h2>
+<a href="/memes/iridocyclitis">Iridocyclitis</a>
+</h2>
+</td>
+</tr>
+<tr>
+<td class='entry_17018'>
+<a href="/memes/put-em-in-a-coffin" class="photo"><img alt="Put &#x27;Em In a Coffin" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/017/018/Screen_Shot_2014-12-15_at_5.20.00_PM.png" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Put &#x27;Em In a Coffin" />
+</a><h2>
+<a href="/memes/put-em-in-a-coffin">Put &#x27;Em In a Coffin</a>
+</h2>
+</td>
+<td class='entry_18395'>
+<a href="/memes/i-didnt-get-no-sleep-cause-of-yall" class="photo"><img alt="I Didn&#x27;t Get No Sleep &#x27;Cause Of Ya&#x27;ll" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/018/395/Screen_Shot_2015-07-02_at_4.37.43_PM.png" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="I Didn&#x27;t Get No Sleep &#x27;Cause Of Ya&#x27;ll" />
+</a><h2>
+<a href="/memes/i-didnt-get-no-sleep-cause-of-yall">I Didn&#x27;t Get No Sleep &#x27;Cause Of Ya&#x27;ll</a>
+</h2>
+</td>
+<td class='entry_20439'>
+<a href="/memes/i-am-the-one" class="photo"><img alt="I Am The One" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/020/439/i_am_the_one.JPG" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="I Am The One" />
+</a><h2>
+<a href="/memes/i-am-the-one">I Am The One</a>
+</h2>
+</td>
+<td class='entry_16163'>
+<a href="/memes/suck-my-ass" class="photo"><img alt="Suck My Ass" data-src="http://i0.kym-cdn.com/entries/icons/medium/000/016/163/B9F0C2C8371087177181232357376_1402177428642_image8844337681.jpg" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Suck My Ass" />
+</a><h2>
+<a href="/memes/suck-my-ass">Suck My Ass</a>
+</h2>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<br>
+<div class='section_form'>
+<div class='tc'>
+<a href="/memes/vine/children" class="large red button">View All Related Entries</a>
+</div>
+</div>
+</div>
+
+
+
+<div class='combo-wrapper'>
+<div class='combo-left'>
+<a href="https://www.facebook.com/knowyourmeme" class="promotion-widget" data-name="KYM Facebook" target="_blank"><img alt="KYM Facebook" data-src="http://i0.kym-cdn.com/promotions/images/wide/000/000/001/f49.jpg" height="250" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="KYM Facebook" width="350" />
+</a></div>
+<div class='combo-right'>
+<div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250' data-options='{"containerId":"rectangle-unit-entry-1","lazyLoad":true}' data-trigger-refresh='both' id='rectangle-unit-entry-1'></div> </div>
+</div>
+<div class='clearfix'></div>
+</div>
+
+<script type='text/javascript'>
+  $(function() {
+    $('#comments-list').bind('enterviewport', function() {
+      if (!$(this).hasClass('displayed')) {
+        $(this).addClass('displayed');
+        current_page = window.location.pathname.replace('/wall', '').replace(/\/$/, '');
+        $.get(current_page + '/comments.js');
+      }
+    }).bullseye();
+  });
+</script>
+
+<section class='section_content rel' id='videos'>
+<h2>
+Recent Videos
+<small class='nb'>6 total</small>
+</h2>
+<div class='section_body recent-videos' id='videos_list'>
+<table class='video_list' id='recent-videos'>
+<tr>
+<td>
+<div class='video_box rel' id='video_151504'>
+<a class='video' data-colorbox-url='/videos/151504-gavin/colorbox' href='/videos/151504-gavin' rel='video_gallery'>
+<img alt="Gavin Says &quot;Blueberry&quot;" data-src="https://v.cdn.vine.co/r/videos/4B65912EBD1233215392206770176_304e9fd4a7f.4.2.12833327148486651823.mp4.jpg?versionId=8WvY962yzEB6FtSoEH.MpO6XJd7nV2iO" height="125" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" style="width: 165px; height: 125px;" title="Gavin Says &quot;Blueberry&quot;" width="165" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin Says &quot;Blueberry&quot;
+</strong>
+<br>
+<em>
+Gavin
+</em>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='video_box rel' id='video_151503'>
+<a class='video' data-colorbox-url='/videos/151503-gavin/colorbox' href='/videos/151503-gavin' rel='video_gallery'>
+<img alt="Gavin Gets Bitten By His Friend" data-src="https://v.cdn.vine.co/r/thumbs/37152D56C71107156681844199424_26f6ef04f8e.1.2.11706619992475181516.mp4.jpg?versionId=._eZktdZN.sd2IIzq8.Kcl5bYgLgJK1A" height="125" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" style="width: 165px; height: 125px;" title="Gavin Gets Bitten By His Friend" width="165" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin Gets Bitten By His Friend
+</strong>
+<br>
+<em>
+Gavin
+</em>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='video_box rel' id='video_151502'>
+<a class='video' data-colorbox-url='/videos/151502-gavin/colorbox' href='/videos/151502-gavin' rel='video_gallery'>
+<img alt="Doritos and Gavin" data-src="https://v.cdn.vine.co/r/thumbs/9AA20AC12F1066162540708769792_203990f25d0.0.0.11399087899696436127.mp4.jpg?versionId=Ya1AYWOY01LM8JwhIFaYgWhMqjzS615_" height="125" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" style="width: 165px; height: 125px;" title="Doritos and Gavin" width="165" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Doritos and Gavin
+</strong>
+<br>
+<em>
+Gavin
+</em>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='video_box rel' id='video_151501'>
+<a class='video' data-colorbox-url='/videos/151501-gavin/colorbox' href='/videos/151501-gavin' rel='video_gallery'>
+<img alt="Gavin Knows Where Milk Comes From" data-src="https://v.cdn.vine.co/r/videos/2C1E86DC961272377971977998336_410a9e65123.2.1.700906397397661567.mp4.jpg?versionId=ubGre0IEHtP47ruZBH0KeM_F11MOF7DR" height="125" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" style="width: 165px; height: 125px;" title="Gavin Knows Where Milk Comes From" width="165" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin Knows Where Milk Comes ...
+</strong>
+<br>
+<em>
+Gavin
+</em>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<div class='video_box rel' id='video_151499'>
+<a class='video' data-colorbox-url='/videos/151499-gavin/colorbox' href='/videos/151499-gavin' rel='video_gallery'>
+<img alt="When It&#x27;s 2 for 1 Wine" data-src="https://v.cdn.vine.co/r/thumbs/B1E9D0C45A1351351228780679168_5a4eadff705.19.0.66F77D0B-FFD3-4272-B9C0-AB14AA816F98.mp4.jpg?versionId=WmrBKHTWlScJLrba7FYLxqtn_1P_0_rk" height="125" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" style="width: 165px; height: 125px;" title="When It&#x27;s 2 for 1 Wine" width="165" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+When It's 2 for 1 Wine
+</strong>
+<br>
+<em>
+Gavin
+</em>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='video_box rel' id='video_151498'>
+<a class='video' data-colorbox-url='/videos/151498-gavin/colorbox' href='/videos/151498-gavin' rel='video_gallery'>
+<img alt="Gavin Immediately Regrets His Decision" data-src="https://v.cdn.vine.co/r/thumbs/69FD2B9EE61132867331480023040_2.5.1.15301476299651832670.mp4.jpg?versionId=jjrD30NejW8znGTtOkWUAeVrKHFghHMU" height="125" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" style="width: 165px; height: 125px;" title="Gavin Immediately Regrets His Decision" width="165" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin Immediately Regrets His...
+</strong>
+<br>
+<em>
+Gavin
+</em>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<div class='section_form c' id='video_form'>
+<a class='button red abs' href='/memes/gavin/videos/new' rel='nofollow'>+ Add a Video</a>
+</div>
+</section>
+
+<section class='section_content rel' id='photos'>
+<h2>
+Recent Images
+<small class='nb'>7 total</small>
+</h2>
+<div class='section_body recent-images' id='photos_list'>
+<table class='photo_list' id='recent-images'>
+<tr>
+<td>
+<div class='photo_box rel' id='photo_1163537'>
+<a class='photo' href='/photos/1163537-gavin'>
+<img alt="imgflip.com face eyebrow cheek child nose lip skin person chin human hair color toddler forehead ear head boy eye mouth infant tooth close up" data-src="http://i0.kym-cdn.com/photos/images/list/001/163/537/35a.gif" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Gavin" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin
+</strong>
+<br>
+Uploaded by
+Novembyr
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='photo_box rel' id='photo_1149907'>
+<a class='photo' href='/photos/1149907-gavin'>
+<img alt="When you ask ya parents a question and it turns into a lecture" data-src="http://i0.kym-cdn.com/photos/images/list/001/149/907/662.png" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Gavin Getting Lectured" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin
+</strong>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='photo_box rel' id='photo_1149906'>
+<a class='photo' href='/photos/1149906-gavin'>
+<img alt="Gavin Memes * Follow GavMemes GAVMEMES #WhylMissBeingALittleKid Being able to make pillow forts" data-src="http://i0.kym-cdn.com/photos/images/list/001/149/906/6f5.png" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Gavin In Pillows" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin
+</strong>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='photo_box rel' id='photo_1149902'>
+<a class='photo' href='/photos/1149902-gavin'>
+<img alt="+ Follow Gavin Memes @GavMemes How ya mom be looking like when you get home too late @Gavmeme" data-src="http://i0.kym-cdn.com/photos/images/list/001/149/902/aef.png" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Gavin Memes" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin
+</strong>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+</tr>
+<tr>
+<td>
+<div class='photo_box rel' id='photo_1149899'>
+<a class='photo' href='/photos/1149899-gavin'>
+<img alt="Gavin Memes @GavMemes + Follow When you want mcdonalds but ya mom says there&#x27;s food at home RETWEETS LIKES 5,9127,124" data-src="http://i0.kym-cdn.com/photos/images/list/001/149/899/18d.png" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Gavin McDonalds" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin
+</strong>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='photo_box rel' id='photo_1149895'>
+<a class='photo' href='/photos/1149895-gavin'>
+<img alt="Follow Gavin Memes GavMemes When bae gets mad and says &quot;go talk to your other hoes&quot;" data-src="http://i0.kym-cdn.com/photos/images/list/001/149/895/2db.png" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Gavin Memes with Baes" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin
+</strong>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+<div class='photo_box rel' id='photo_1149893'>
+<a class='photo' href='/photos/1149893-gavin'>
+<img alt="Sk @skaijackson ai Jackso + Follow Mood 24/7" data-src="http://i0.kym-cdn.com/photos/images/list/001/149/893/c98.png" height="114" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Skai Jackson Reacts to Gavin" width="162" />
+<div class='info abs'>
+<div class='c'>
+<strong>
+Gavin
+</strong>
+<br>
+Uploaded by
+Adam
+</div>
+</div>
+</a>
+</div>
+
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<div class='section_form c' id='photo_form'>
+<a class='button red abs' href='/memes/gavin/photos/new' rel='nofollow'>+ Add an Image</a>
+</div>
+</section>
+
+
+<div data-allow='true' id='allow-comments'></div>
+<div class='facebook_comments'>
+<h2>Facebook Comments</h2>
+<div class='fb-comments' data-href='http://knowyourmeme.com/memes/gavin' data-num-posts='1' data-width='680'></div>
+
+</div>
+<div class='combo-wrapper'>
+<div class='combo-left'>
+<a href="http://pinterest.com/knowyourmeme/" class="promotion-widget" data-name="KYM Pinterest" target="_blank"><img alt="KYM Pinterest" data-src="http://i0.kym-cdn.com/promotions/images/wide/000/000/002/f82.jpg" height="250" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="KYM Pinterest" width="350" />
+</a></div>
+<div class='combo-right'>
+<div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250' data-options='{"containerId":"rectangle-unit-entry-2","lazyLoad":true}' data-trigger-refresh='both' id='rectangle-unit-entry-2'></div> </div>
+</div>
+<div class='clearfix'></div>
+</div>
+
+<section class='section_content rel' data-url='/memes/gavin/comments.js' id='comments'>
+<h2>Top Comments</h2>
+<section id='top-comments'>
+<article class='comment rel thumbable' data-id='3424833' data-key='comments' data-nsfw='false' data-owner-id='211631' data-score='27' data-timestamp='1469153153' id='comment_3424833'>
+<a href="/users/samekichi-kiseki" class="photo abs"><img alt="Samekichi Kiseki" data-src="http://i0.kym-cdn.com/profiles/icons/tiny/000/211/567/9e5.png" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Samekichi Kiseki" />
+</a><section class='comment_body'>
+<div class='delete-comment hide'>
+<a href="/comments/3424833" class="button small red" data-confirm="Are you sure?" data-method="delete" data-remote="true" rel="nofollow">Delete</a>
+</div>
+<div class='nsfw-comment hide'>
+<a href="/comments/3424833/nsfw" class="small blue button" data-confirm="Are you sure?" data-method="put" data-remote="true" rel="nofollow">NSFW</a>
+</div>
+<h6>
+<a href="/users/samekichi-kiseki">Samekichi Kiseki</a>
+<span class='label label-moderator'>
+Moderator
+</span>
+</h6>
+<p class='date'>
+<a href="/comments/3424833" class="permalink" rel="nofollow"><abbr class='timeago' title='2016-07-21T22:05:53-04:00'>Jul 21, 2016 at 10:05PM EDT</abbr></a>
+</p>
+<div class='message'>
+<p><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" data-src="http://24.media.tumblr.com/adb6e1a496eafb90f22388530eb8fcd2/tumblr_myflcirhIc1s8epj2o3_250.gif"></p>
+</div>
+<div class='comment-bottom-bar'>
+<div class='thumb_mini_container'><span class='green_score thumb_score'>+27</span><span alt='27 up, 0 down' class='thumb_mini up' title='27 up, 0 down'></span>
+</div>
+<div class='thumbs'>
+<a href="/thumbs/Comment/3424833/up" class="thumb up off user" data-method="post" data-remote="true" rel="nofollow"></a>
+<a href="/thumbs/Comment/3424833/down" class="thumb down off user" data-method="post" data-remote="true" rel="nofollow"></a>
+</div>
+<div class='reply-link-container'>
+<a href="/comments/3424833#comment_3424833" class="reply-link small red button" data-comment-id="3424833" rel="nofollow">Reply</a>
+</div>
+</div>
+</section>
+</article>
+<article class='comment rel thumbable' data-id='3425822' data-key='comments' data-nsfw='false' data-owner-id='219103' data-score='13' data-timestamp='1469209039' id='comment_3425822'>
+<a href="/users/calwyn" class="photo abs"><img alt="Calwyn" data-src="http://i0.kym-cdn.com/profiles/icons/tiny/000/219/039/496.jpg" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Calwyn" />
+</a><section class='comment_body'>
+<div class='delete-comment hide'>
+<a href="/comments/3425822" class="button small red" data-confirm="Are you sure?" data-method="delete" data-remote="true" rel="nofollow">Delete</a>
+</div>
+<div class='nsfw-comment hide'>
+<a href="/comments/3425822/nsfw" class="small blue button" data-confirm="Are you sure?" data-method="put" data-remote="true" rel="nofollow">NSFW</a>
+</div>
+<h6>
+<a href="/users/calwyn">Calwyn</a>
+<span class='label label-moderator'>
+Moderator
+</span>
+</h6>
+<p class='date'>
+<a href="/comments/3425822" class="permalink" rel="nofollow"><abbr class='timeago' title='2016-07-22T13:37:19-04:00'>Jul 22, 2016 at 01:37PM EDT</abbr></a>
+<span style='color: black;'>in reply to</span>
+<a href="#comment_3424833" class="in-reply-to-link" data-parent-id="3424833">Samekichi Kiseki</a>
+</p>
+<div class='message'>
+<p><a href="/photos/629482"><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" class=" kym-image image-auto-link" data-src="http://i3.kym-cdn.com/photos/images/newsfeed/000/629/482/336.gif"></a> <br>
+<a href="/photos/1036947"><img src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" class=" kym-image image-auto-link" data-src="http://i0.kym-cdn.com/photos/images/newsfeed/001/036/947/f3c.gif"></a> </p>
+</div>
+<div class='comment-bottom-bar'>
+<div class='thumb_mini_container'><span class='green_score thumb_score'>+13</span><span alt='13 up, 0 down' class='thumb_mini up' title='13 up, 0 down'></span>
+</div>
+<div class='thumbs'>
+<a href="/thumbs/Comment/3425822/up" class="thumb up off user" data-method="post" data-remote="true" rel="nofollow"></a>
+<a href="/thumbs/Comment/3425822/down" class="thumb down off user" data-method="post" data-remote="true" rel="nofollow"></a>
+</div>
+<div class='reply-link-container'>
+<a href="/comments/3425822#comment_3425822" class="reply-link small red button" data-comment-id="3425822" rel="nofollow">Reply</a>
+</div>
+</div>
+</section>
+</article>
+
+</section>
+<br>
+<p style='float: right;'>
+<a href="#comments_form" class="red button">+ Add a Comment</a>
+</p>
+<h2>
+Comments
+<small class='nb'>17 total</small>
+</h2>
+<section id='comments-list'>
+<br>
+<i class="fa fa-spinner fa-spin fa-2x" style="color: #9f1c27;"></i>
+</section>
+</section>
+<p class='tc'>
+<a href="#comments_form" class="button red large">+ Add a Comment</a>
+</p>
+<div class='hide'>
+<section class='section_form c' id='comments_form'>
+<h3>Add a Comment</h3>
+<form accept-charset="UTF-8" action="http://knowyourmeme.com/memes/gavin/comments" data-remote="true" id="comment_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="8BXTVQZG7HC8kfB2KYK15h8dnTvvi/4ll605YQwCzGI=" /></div><fieldset>
+<textarea cols="40" id="comment_comment" name="comment[comment]" rows="20">
+</textarea>
+</fieldset>
+<fieldset class='buttons c'>
+<input class="button" data-disable-with="Submitting..." name="commit" type="submit" value="Add Comment" />
+</fieldset>
+</form>
+
+
+</section>
+</div>
+<form accept-charset="UTF-8" action="http://knowyourmeme.com/memes/gavin/comments" class="comment-reply-form hide" data-remote="true" id="comment-reply-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="8BXTVQZG7HC8kfB2KYK15h8dnTvvi/4ll605YQwCzGI=" /></div><fieldset>
+<input class="comment-parent-id" id="comment_parent_id" name="comment[parent_id]" type="hidden" value="0" />
+<textarea cols="40" id="comment_comment" name="comment[comment]" rows="3">
+</textarea>
+</fieldset>
+<fieldset>
+<input class="reply-button" data-disable-with="Submitting..." name="commit" type="submit" value="Reply" />
+</fieldset>
+</form>
+
+
+<br>
+
+</article>
+<div data-gallery-path='/memes/gavin/photos/trending' data-initial-path='/photos/gallery.js?id=gavin' id='spp-gallery'>
+<i class="fa fa-spinner fa-spin fa-2x" style="color: #9f1c27;"></i>
+</div>
+
+<div class='hide'>
+<div id='abm-ep'>
+<h1>
+We see that you're using an ad-blocker!
+</h1>
+<hr>
+<div class='msg'>
+<p>
+Know Your Meme is an advertising supported site and we noticed that you're using an ad-blocking solution.
+</p>
+</div>
+<h2>
+To continue reading this entry:
+</h2>
+<hr>
+<div class='options'>
+<div class='o1'>
+<p>
+Turn off your ad-blocker
+</p>
+<a href="/whitelist-us" class="large button" rel="nofollow" target="_blank">DO IT NOW</a>
+</div>
+<div class='o2'>
+<p>
+Login to Know Your Meme
+</p>
+<a href="/login" class="large button" rel="nofollow" target="_blank">LOGIN OR SIGN-UP</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<aside class='right' id='sidebar'>
+<div class='sidebar_box grey' id='top-entries-sidebar'> <h3> Top Entries This Month </h3> <div class='entry-group-1'> <div class='entry-1 top-entry' data-entry-category='Meme' data-entry='Apyr' data-group='1' data-original-category='Meme' data-time='Month'> <div class='top-entry-thumbnail'> <a href="/memes/apyr"><img alt="Apyrrr" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/025/936/apyrrr.jpg" height="160" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="284" /> </a></div> <div class='top-entry-category' style='background: #220a51;'> <a href="/memes/apyr" style="color: white;">Meme</a> </div> <h4> <a href="/memes/apyr">Apyr</a> </h4> </div> <div class='entry-2 top-entry' data-entry-category='Event' data-entry='Channel Awesome Implosion / #ChangeTheChannel' data-group='1' data-original-category='Meme' data-time='Month'> <div class='top-entry-thumbnail'> <a href="/memes/events/channel-awesome-implosion-changethechannel"><img alt="069" data-src="http://i0.kym-cdn.com/news_feeds/icons/mobile/000/031/388/069.jpg" height="86" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="138" /> </a></div> <div class='top-entry-category' style='background: #0b6a40;'> <a href="/memes/events/channel-awesome-implosion-changethechannel" style="color: white;">Event</a> </div> <h4> <a href="/memes/events/channel-awesome-implosion-changethechannel">Channel Awesome Implosion / #ChangeTheChannel</a> </h4> </div> <div class='entry-3 top-entry' data-entry-category='Person' data-entry='Nasim Aghdam' data-group='1' data-original-category='Meme' data-time='Month'> <div class='top-entry-thumbnail'> <a href="/memes/people/nasim-aghdam"><img alt="Nasimmmee" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/018/169/nasimmmee.jpg" height="86" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="138" /> </a></div> <div class='top-entry-category' style='background: #d32f2e;'> <a href="/memes/people/nasim-aghdam" style="color: white;">Person</a> </div> <h4> <a href="/memes/people/nasim-aghdam">Nasim Aghdam</a> </h4> </div> </div> <div class='clearfix'></div> <div class='entry-group-2'> <div class='entry-1 top-entry' data-entry-category='Subculture' data-entry='The Problem With Apu' data-group='2' data-original-category='Meme' data-time='Month'> <div class='top-entry-thumbnail'> <a href="/memes/subcultures/the-problem-with-apu"><img alt="8ae" data-src="http://i0.kym-cdn.com/news_feeds/icons/mobile/000/031/304/8ae.jpg" height="160" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="284" /> </a></div> <div class='top-entry-category' style='background: #5d1cb1;'> <a href="/memes/subcultures/the-problem-with-apu" style="color: white;">Subculture</a> </div> <h4> <a href="/memes/subcultures/the-problem-with-apu">The Problem With Apu</a> </h4> </div> <div class='entry-2 top-entry' data-entry-category='Site' data-entry='Meatspin' data-group='2' data-original-category='Meme' data-time='Month'> <div class='top-entry-thumbnail'> <a href="/memes/sites/meatspin"><img alt="Meetspinz" data-src="http://i0.kym-cdn.com/news_feeds/icons/mobile/000/007/459/meetspinz.jpg" height="86" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="138" /> </a></div> <div class='top-entry-category' style='background: #e09f02;'> <a href="/memes/sites/meatspin" style="color: white;">Site</a> </div> <h4> <a href="/memes/sites/meatspin">Meatspin</a> </h4> </div> <div class='entry-3 top-entry' data-entry-category='Culture' data-entry='Deepfakes' data-group='2' data-original-category='Meme' data-time='Month'> <div class='top-entry-thumbnail'> <a href="/memes/cultures/deepfakes"><img alt="52e" data-src="http://i0.kym-cdn.com/news_feeds/icons/mobile/000/031/401/52e.jpg" height="86" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="138" /> </a></div> <div class='top-entry-category' style='background: #1aa2cb;'> <a href="/memes/cultures/deepfakes" style="color: white;">Culture</a> </div> <h4> <a href="/memes/cultures/deepfakes">Deepfakes</a> </h4> </div> </div> <div class='clearfix'></div> <p class='tc more'> <a href="javascript:;" class="red button" data-original-category="Meme" data-time="Month" id="view-more-top-entries-button" rel="nofollow">View More</a> </p> </div> <div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250,300x600' data-options='{"containerId":"rectangle-unit-1"}' id='rectangle-unit-1'></div> </div> <div class='sidebar_box c' id='entry_content_buttons'> <p class='tc'> <a class='button red large' href='/memes/gavin/suggestions/new' rel='nofollow'>Suggest a Change</a> &nbsp; <a class='button red large' href='/memes/gavin/edits' rel='nofollow'>Edit History</a> </p> </div> <aside class='sidebar_box grey rel' id='author_info'> <h3> Entry Editors <a href="/memes/gavin/editorships">(2)</a> </h3> <section class='editor row c'> <a class='photo left' href='/users/adam--31'> <img alt="Adam" data-src="http://i0.kym-cdn.com/profiles/icons/tiny/000/286/728/f94.jpg" height="32" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Adam" width="32" /> </a> <div class='name left'> <h6> <a href='/users/adam--31'>Adam</a> </h6> <p class='role'> Know Your Meme Universal Champion </p> </div> </section> <section class='editor row c'> <a class='photo left' href='/users/y-f'> <img alt="Y F" data-src="http://i0.kym-cdn.com/profiles/icons/tiny/000/316/433/dca.jpg" height="32" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" title="Y F" width="32" /> </a> <div class='name left'> <h6> <a href='/users/y-f'>Y F</a> </h6> <p class='role'> Digital Archaeologist &amp; Scrapbooker </p> </div> </section> <a class='button red small abs' href='/memes/gavin/editorships/ask' rel='nofollow'>+ Request Editorship</a> <p class='tc more'> <a class='button red' href='/memes/gavin/editorships' rel='nofollow'>View All Editors</a> </p> </aside> <div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250' data-options='{"containerId":"rectangle-unit-2"}' id='rectangle-unit-2'></div> </div> <div class='sidebar_box c' id='popular_galleries'> <h3> Today's Top Image Galleries </h3> <table> <tr class='row-1'> <td> <a href="/memes/doki-doki-literature-club/photos/trending" rel="nofollow"><img alt="Slpb3mm" class="top-gallery-thumbnail" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/024/101/slpB3Mm.jpg" height="90" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="144" /></a> <h4> <a href="/memes/doki-doki-literature-club/photos/trending" rel="nofollow">Doki Doki Literature Club</a> </h4> </td> <td> <a href="/memes/my-hero-academia/photos/trending" rel="nofollow"><img alt="Wp1874080" class="top-gallery-thumbnail" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/017/282/wp1874080.jpg" height="90" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="144" /></a> <h4> <a href="/memes/my-hero-academia/photos/trending" rel="nofollow">My Hero Academia</a> </h4> </td> </tr> <tr class='row-2'> <td> <a href="/memes/darling-in-the-franxx/photos/trending" rel="nofollow"><img alt="118" class="top-gallery-thumbnail" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/025/246/118.jpg" height="90" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="144" /></a> <h4> <a href="/memes/darling-in-the-franxx/photos/trending" rel="nofollow">Darling in the Franxx</a> </h4> </td> <td> <a href="/memes/channel-awesome-implosion-changethechannel/photos/trending" rel="nofollow"><img alt="Channelawesometeamshot" class="top-gallery-thumbnail" data-src="http://i0.kym-cdn.com/entries/icons/mobile/000/025/840/ChannelAwesomeTeamshot.jpg" height="90" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="144" /></a> <h4> <a href="/memes/channel-awesome-implosion-changethechannel/photos/trending" rel="nofollow">Channel Awesome Implosion</a> </h4> </td> </tr> </table> </div> <div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250' data-options='{"containerId":"rectangle-unit-3","lazyLoad":true}' id='rectangle-unit-3'></div> </div> <div id='ora-tv' style='margin-bottom: 15px; min-height: 250px;'> <iframe allowfullscreen='' height='250' mozallowfullscreen='' scrolling='no' src='//www.ora.tv/embed/partner/knowyourmeme/playlist/262/v/1?break_aspect_ratio=true' webkitallowfullscreen='' width='300'></iframe> </div> <div class='sidebar_box c' id='entry-categories-sidebar'> <h3> <a href="/categories" data-category="Heading">Entry Categories</a> </h3> <a href="/categories/event" class="sidebar-category-badge" data-category="Events" style="background: #0b6a40; color: white;">Events <span>1,306</span></a> <a href="/categories/meme" class="sidebar-category-badge" data-category="Memes" style="background: #220a51; color: white;">Memes <span>13,846</span></a> <a href="/categories/person" class="sidebar-category-badge" data-category="People" style="background: #d32f2e; color: white;">People <span>1,258</span></a> <a href="/categories/site" class="sidebar-category-badge" data-category="Sites" style="background: #e09f02; color: white;">Sites <span>424</span></a> <a href="/categories/subculture" class="sidebar-category-badge" data-category="Subcultures" style="background: #5d1cb1; color: white;">Subcultures <span>1,282</span></a> </div> <div class='sticky-sidebar'> <div class='rectangle-unit-wrapper'> <div class='complex-rectangle-unit complex-ad' data-name='300x250,300x600' data-options='{"containerId":"rectangle-unit-sticky"}' id='rectangle-unit-sticky'></div> </div> <div class='like_box'> <div class='fb-page fb-page-like-sidebar' data-adapt-container-width='false' data-hide-cover='true' data-href='https://www.facebook.com/knowyourmeme' data-position='like-box' data-show-facepile='false' data-small-header='true' data-width='300'></div> </div> </div>
+</aside>
+</div>
+<script type='text/javascript'> (function() { window.cToolbarInit = function() { cToolbar.load({ mobileRightButton: 'email', snapchatRelUrl: '', facebookUsername: 'knowyourmeme', facebookName: 'Know Your Meme', twitterHandle: 'knowyourmeme', twitterName: 'Know Your Meme', instagramHandle: 'knowyourmeme', instagramName: 'Know Your Meme', youtube: 'knowyourmeme', youtubeDisplayName: 'knowyourmeme', desktopBackground: 'solid', desktopSocialButtons: [], channel: '', mobileVideo: '', videoCollapsed: '' }); }; var ns = document.createElement('script'); ns.type = 'text/javascript'; ns.async = true; ns.src = '//toolbar.complex.com/dist/ctoolbar.min.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ns, s); })(); </script>
+<footer id='footer'> <div class='wrap'> <table id='footer_boxes'> <tr> <td class='footer_box'> <h5>Meme DB</h5> <ul> <li> <a href='/memes'>Memes</a> </li> <li> <a href='/episodes'>Episodes</a> </li> <li> <a href='/forums'>Forums</a> </li> </ul> </td> <td class='footer_box'> <h5>Features</h5> <ul> <li> <a href='/blog'>KYM Blog</a> </li> <li> <a href='/photos'>Images</a> </li> <li> <a href='/videos'>Videos</a> </li> </ul> </td> <td class='footer_box'> <h5>Extras!</h5> <ul> <li> <a href='/blog/rules-and-guidelines/'>Site Rules</a> </li> <li> <a href='/blog/the-style-guide'>Style Guide</a> </li> <li> <a href='/subscribe'>RSS Feeds</a> </li> <li> <a href='/chat' rel='nofollow'>Chat</a> </li> </ul> </td> <td class='footer_box'> <h5>About KYM</h5> <ul> <li> <a href='/about'>About Us</a> </li> <li> <a href='/credits'>Credits</a> </li> <li> <a href='/contact'>Contact</a> </li> <li> <a href='/jobs'>Jobs</a> </li> </ul> </td> <td class='footer_box'> <h5>KYM Is Also On</h5> <ul> <li> <a href='https://www.facebook.com/knowyourmeme' rel='nofollow' target='_blank'>Facebook</a> </li> <li> <a href='https://www.pinterest.com/knowyourmeme/' rel='nofollow' target='_blank'>Pinterest</a> </li> <li> <a href='https://twitter.com/knowyourmeme' rel='nofollow' target='_blank'>Twitter</a> </li> <li> <a href='https://www.youtube.com/user/KnowYourMeme' rel='nofollow' target='_blank'>YouTube</a> </li> <li> <a href='http://tumblr.knowyourmeme.com' rel='nofollow' target='_blank'>Tumblr</a> </li> </ul> </td> </tr> </table> </div> </footer> <div id='sub_network_footer_wrapper'> <div id='subnetworkfooter'> <p class='footerlinks'> <a href="http://corp.cheezburger.com/legal/" rel="nofollow" target="_blank">Legal Information</a>: <a href="/">Know Your Meme &reg;</a> is a trademark of <a href="http://literally.media" target="_blank">Literally Media Ltd.</a> By using this site, you are agreeing by the site's <a href="http://corp.cheezburger.com/legal/terms-of-service/" rel="nofollow" target="_blank">terms of use</a> and <a href="http://corp.cheezburger.com/legal/privacy-policy/" rel="nofollow" target="_blank">privacy policy</a> and <a href="http://corp.cheezburger.com/legal/copyright-infringement-notification/" rel="nofollow" target="_blank">DMCA policy</a>. <br> &copy; 2007-2018 <a href="http://literally.media" target="_blank">Literally Media Ltd.</a> </p> </div> </div>
+<div class='hide'> <div id='login_signup_form'> <h3>Hey! You must login or signup first!</h3> <table> <tr> <td class='login'> <h6>Already a memeber?</h6> <p><a href="/login" class="large red button" rel="nofollow">Login Now!</a></p> </td> <td class='signup'> <h6>Don't have an account?</h6> <p><a href="/signup" class="large red button" rel="nofollow">Sign up Now!</a></p> </td> </tr> </table> </div> </div> <div class='hide'> <div id='abm'> <a href="/whitelist-us" id="abm-image-link" rel="nofollow" target="_blank"><img alt="Abm" data-src="http://a.kym-cdn.com/assets/abm-5e4f6f4a89609dcba11dbc32772815cc.png" height="800" id="abm-image" src="http://a.kym-cdn.com/assets/blank-b3f96f160b75b1b49b426754ba188fe8.gif" width="800" /> </a><p> <a href="javascript:;" id="abm-close-text" rel="nofollow">No thanks, take me back to the meme zone!</a> </p> </div> </div> <script type='text/javascript'>var _qevents = _qevents || []; (function() { var elem = document.createElement('script'); elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js"; elem.async = true; elem.type = "text/javascript"; var scpt = document.getElementsByTagName('script')[0]; scpt.parentNode.insertBefore(elem, scpt); })(); _qevents.push([{ qacct:"p-75z9nhQwNH4Ek" }, { qacct:"p-149W7Ang9fLCQ" }]);</script> <noscript> <div style='display: none;'> <img alt='Quantcast' border='0' height='1' src='http://pixel.quantserve.com/pixel?a.1=p-75z9nhQwNH4Ek&amp;a.2=p-149W7Ang9fLCQ' style='display: none;' width='1'> </div> </noscript> <script type='text/javascript'>var _comscore = _comscore || []; _comscore.push({ c1: "2", c2: "6685975" }); (function() { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();</script> <noscript> <img src='http://b.scorecardresearch.com/p?c1=2&amp;c2=6685975&amp;cv=2.0&amp;cj=1'> </noscript> <div id='chartbeat-sections' data-sections='Entry Pages'></div> <script type='text/javascript'> var _sf_async_config = _sf_async_config || {}; _sf_async_config.uid = 6425; _sf_async_config.domain = 'knowyourmeme.com'; _sf_async_config.useCanonical = true; _sf_async_config.title = document.title.replace(' | Know Your Meme', ''); _sf_async_config.sections = 'Entry Pages'; _sf_async_config.authors = ''; $(function() { var script = document.createElement('script'); script.async = true; script.src = '//static.chartbeat.com/js/chartbeat.js'; document.body.appendChild(script); }); </script> <script src='//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=65fbfb71-0187-4864-a8c1-a476d6acab1e' type='text/javascript'></script>
+<div class='social-data' data-media='http://i0.kym-cdn.com/entries/icons/facebook/000/020/941/gavin_mastodon.jpg' data-url='http://knowyourmeme.com/memes/gavin'></div>
+</body>
+</html>
