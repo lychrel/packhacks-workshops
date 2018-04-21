@@ -100,7 +100,7 @@ parameters!
 
 ---
 
-# PROBLEM: MNIST Digit Classification
+# MNIST Digit Classification
 
 ---
 
@@ -112,7 +112,7 @@ parameters!
 ### Keras
 - high-level neural network API
 - supports multiple backends (including TensorFlow)
-- Tensorflow is
+
 ### Tensorflow
 - Google's (now open-source) Machine Learning framework
 
@@ -129,7 +129,7 @@ input_layer = tf.reshape(features["x"], [-1, 28, 28, 1])
 
 ![Press Down Key](img/down-arrow.png)
 +++
-### Convolutional
+### Convolutional (+ Activation)
 
 ```python
 conv1 = tf.layers.conv2d(
@@ -140,6 +140,45 @@ conv1 = tf.layers.conv2d(
       activation=tf.nn.relu)
 ```
 
+![Press Down Key](img/down-arrow.png)
++++
+### Pooling
+
+```python
+pool1 = tf.layers.max_pooling2d(inputs=conv1,
+                                pool_size=[2, 2],
+                                strides=2)
+```  activation=tf.nn.relu)
+```
+
+![Press Down Key](img/down-arrow.png)
++++
+### Dense + Dropout (Normalization)
+
+```python
+last_pool_flatten = tf.reshape(pool2, [-1, 7 * 7 * 64])
+                  dense = tf.layers.dense(inputs=pool2_flat,
+                  units=1024, activation=tf.nn.relu)
+dropout = tf.layers.dropout(
+        inputs=dense, rate=0.4, training=mode == tf.estimator.ModeKeys.TRAIN)
+```
+
+![Press Down Key](img/down-arrow.png)
++++
+### Classification (SoftMax Cross-Entropy)
+
+```python
+# classes (digits 0 through 9)
+logits = tf.layers.dense(inputs=dropout, units=10)
+
+predictions = {
+    # Generate predictions (for PREDICT and EVAL mode)
+    "classes": tf.argmax(input=logits, axis=1),
+    # Add `softmax_tensor` to the graph. It is used for PREDICT and by the
+    # `logging_hook`.
+    "probabilities": tf.nn.softmax(logits, name="softmax_tensor")
+}
+```
 
 ---
 
