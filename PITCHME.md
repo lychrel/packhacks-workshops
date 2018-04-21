@@ -61,6 +61,12 @@ parameters!
 ### [CNN as Volumes](http://cs231n.github.io/convolutional-networks/)
 ![conv2](img/CONV2.jpeg)
 
++++
+
+## CNNs as Deep Learning
+
+CNNs use convolutional and pooling layers to _extract features_ from a labeled dataset (features don't need to be provided)
+
 ---
 
 # CNN LAYERS
@@ -237,7 +243,7 @@ For 2000 training images, split into _batches_ of 500, it will take 4 _iteration
 
 ## Hyperparameter Optimization
 - _training_: batch size, number of epochs, learning rate, learning optimizer
-- _layer_: kernel size/shape, stride, padding, weight initializations, activation functions
+- _layer_: number of filters, kernel size/shape, stride, padding, weight initializations, activation functions
 - _architecture_: number of layers, dropout methods/values
 
 ---
@@ -245,6 +251,7 @@ For 2000 training images, split into _batches_ of 500, it will take 4 _iteration
 ## Hyperparameter Optimization Methods
 
 Train with different sets of hyperparameters and see which combination yields the best results.
+
 
 - Grid Search
 - Random Search
@@ -282,139 +289,13 @@ Train with different sets of hyperparameters and see which combination yields th
 
 ---
 
-### Softmax Implementation
-
-![Softmax](img/s1.png)
-
-![Press Down Key](img/down-arrow.png)
-
-+++
-
-### equation form
-![Softmax (equation form)](img/s1_eqns.png)
-
-![Press Down Key](img/down-arrow.png)
-
-+++
-
-### matrix form
-![Softmax (matrix form)](img/s1_matrices.png)
-
-![Press Down Key](img/down-arrow.png)
-
-+++
-
-### defining the model
-
-```python
-x = tf.placeholder(tf.float32, [None, 784])
-W = tf.Variable(tf.zeros([784, 10]))
-b = tf.Variable(tf.zeros([10]))
-y = tf.nn.softmax(tf.matmul(x, W) + b)
-```
-
----
-
-## MNIST with SoftMax
-
-![Press Down Key](img/down-arrow.png)
-
-+++?code=mnist_softmax.py&lang=python
-
-@[16-20](tutorial source)
-@[21-27](various imports)
-@[28-29](load MNIST data)
-@[30](load TensorFlow API)
-@[32](FLAGS)
-@[35-37](import the (one-hot encoded) MNIST data)
-@[40-42](create variables, weights, and biases)
-@[43](matrix multiplication)
-@[46](output layer (predicted probabilities))
-@[57-58](define the loss function (measurement of incorrectness))
-@[59](define how we want to reduce loss (incorrectness) over time (stochastic gradient descent))
-@[61-62](start a session in TensorFlow)
-@[64-66](train network using above parameters on 10 sets of 100 images)
-@[69-71](check accuracy of predictions)
-@[74-79](run session)
-
----
-
-## Running It
-- let's go to the terminal!
-
----
-
-## Problem
-
-- rotated characters can be hard to recognize
-
-![Press Down Key](img/down-arrow.png)
-
-+++
-
-### Example MNIST  
-![5](img/5mnist.png)
-![Press Down Key](img/down-arrow.png)
-+++
-### Translated
-![5](img/5_trans.png)
-![Press Down Key](img/down-arrow.png)
-+++
-### Rotated
-![5](img/5rot.png)
-
----
-
-## Convolutional Neural Networks (CNNs)
-- assume image inputs
-- 3D layers: width, height, depth
-- neurons in a layer only connected to small _regions_ of previous layer, instead of fully-connected
-- unique layer types
-
----
-
-## CNN Unique Layers
-- convolutional: slide filters across image --> activation maps of image responses to filters ([example](http://cs231n.github.io/convolutional-networks/))
-  - conv layers learn a set of filters appropriate to the problem
-- ReLu (Rectified Linear units): often follow conv layers. Adds nonlinearity to the net (e.g. changing all negative activations to 0)
-
-![Press Down Key](img/down-arrow.png)
-
-+++
-
-- pooling: "downsample the data": reduce spatial size of representation to cut down computation and number of parameters (also controls overfitting)
-- dense (fully-connected): often just for classification
-
----
-
-## Typical CNN Structure
-
-1. convolutional modules (conv + pooling) for _feature extraction_
-2. 1+ dense layer(s) for classification at end
-
----
-
-## MNIST with CNN
-
-![Press Down Key](img/down-arrow.png)
-
-+++?code=mnist_cnn.py&lang=python
-
-@[38-43](example conv layer with appended ReLu activation)
-@[49](example pool layer (note simplicity of implementation))
-@[87](output layer shape(softmax classification))
-@[94](softmax classification)
-
----
-
 # References
-
----
 
 http://cs231n.github.io/convolutional-networks/
 https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/
 https://seas.ucla.edu/~kao/nndl/lectures/cnn.pdf
 
+---
 
 # Additional Info
 
@@ -468,18 +349,11 @@ for predicted distribution _y_, one-hot vector _y'_
 
 ---
 
-## CNN Layers
-
-- convolutional
-- ReLu activation
-- pooling
-- dropout
-
----
-
 ## Pooling Visualization
 
 ![pooling](img/pooling.png)
+
+---
 
 ## CNN Hyperparameters
 
@@ -493,3 +367,53 @@ for predicted distribution _y_, one-hot vector _y'_
 
 - [intro, pt 1](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/)
 - [intro, pt 2](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/)
+
+---
+
+### Softmax Implementation
+
+![Softmax](img/s1.png)
+
+![Press Down Key](img/down-arrow.png)
+
++++
+
+### equation form
+![Softmax (equation form)](img/s1_eqns.png)
+
+![Press Down Key](img/down-arrow.png)
+
++++
+
+### matrix form
+![Softmax (matrix form)](img/s1_matrices.png)
+
+![Press Down Key](img/down-arrow.png)
+
++++
+
+### defining the model
+
+```python
+x = tf.placeholder(tf.float32, [None, 784])
+W = tf.Variable(tf.zeros([784, 10]))
+b = tf.Variable(tf.zeros([10]))
+y = tf.nn.softmax(tf.matmul(x, W) + b)
+```
+
+---
+
+## Convolutional Neural Networks (CNNs)
+- assume image inputs
+- 3D layers: width, height, depth
+- neurons in a layer only connected to small _regions_ of previous layer, instead of fully-connected
+- unique layer types
+
+---
+
+## Typical CNN Structure
+
+1. convolutional modules (conv + pooling) for _feature extraction_
+2. 1+ dense layer(s) for classification at end
+
+---
