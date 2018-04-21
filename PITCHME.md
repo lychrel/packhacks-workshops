@@ -4,17 +4,21 @@ with Keras
 ---
 
 ## Why CNNs?
-- Image inputs
+- Image inputs cause problems for fully-connected neural networks.
 
 ![Press Down Key](img/down-arrow.png)
 +++
-small image:
-$$32\times 32\times 3 = 3072$$ parameters per neuron (first layer)
-$$200\times 200\times 3 = 120,000$$ parameters!
+Smaller image (CIFAR-10):
+
+$32\times 32\times 3 = 3072$ parameters per neuron (first layer)
+
+Larger image (most stuff):
+
+$200\times 200\times 3 = 120,000$ parameters!
 
 ![Press Down Key](img/down-arrow.png)
 +++
-![gavin][img/gavin.png]
+![gavin](img/gavin.png)
 - computationally expensive
 - prone to overfitting
 
