@@ -24,8 +24,8 @@ with Keras
 ---
 
 ## model pic showing how CNN works
-![conv1](img/CONV1.png)
-![conv2](img/CONV2.png)
+![conv1](img/CONV1.jpeg)
+![conv2](img/CONV2.jpeg)
 
 ---
 
