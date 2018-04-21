@@ -253,9 +253,9 @@ Train with different sets of hyperparameters and see which combination yields th
 
 ---
 
-## ![Running it all: Google CoLab][https://tinyurl.com/packhacks-cnn]
+## [Running it all: Google CoLab](https://tinyurl.com/packhacks-cnn)
 
-![https://tinyurl.com/packhacks-cnn][https://tinyurl.com/packhacks-cnn]
+[https://tinyurl.com/packhacks-cnn](https://tinyurl.com/packhacks-cnn)
 
 ---
 
