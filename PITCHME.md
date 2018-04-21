@@ -19,28 +19,33 @@ $200\times 200\times 3 = 120,000$ parameters!
 ![Press Down Key](img/down-arrow.png)
 +++
 ![gavin](img/gavin.jpg)
-- computationally expensive
-- prone to overfitting
+![Press Down Key](img/down-arrow.png)
++++
+![loco](img/ruinsane.gif)
+![Press Down Key](img/down-arrow.png)
++++
+
+- computationally expensive, prone to overfitting
 
 ---
 
-## CNN Inspiration: the Visual Cortex
+## CNN Inspiration:
+###the Visual Cortex
 - Regions of cells are sensitive to specific _regions_ of the visual field
 - neurons in these regions only fire in presence of specific _features_: vertical, horizontal, or diagonal edges, etc.
 
 ---
 
-## CNN Layers
-- convolutional, activation, pooling, dense
+### Convolutional Neural Networks
+- assuming _image_ inputs (usually)
+- neurons in a layer only connected to small _regions_ of previous layer, instead of fully-connected
+- unique layer types
+- operate on 3D _volumes_
 
----
+![Press Down Key](img/down-arrow.png)
 
-## Slide for each layer type and corresponding keras code
-- including properties
++++
 
----
-
-## model pic showing how CNN works
 ![conv1](img/CONV1.jpeg)
 
 ![Press Down Key](img/down-arrow.png)
@@ -51,7 +56,24 @@ $200\times 200\times 3 = 120,000$ parameters!
 
 ---
 
-## car pic example
+## Convolutional Layers
+
+---
+
+## Activation Layers
+
+---
+
+## Pooling Layers
+
+---
+
+## Dense & Classification Layers
+
+---
+
+## Example CNN Architecture
+![convcar](img/convnet_coche.jpeg)
 
 ---
 
@@ -203,6 +225,15 @@ y = tf.nn.softmax(tf.matmul(x, W) + b)
 @[94](softmax classification)
 
 ---
+
+# References
+
+---
+
+http://cs231n.github.io/convolutional-networks/
+https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/
+https://seas.ucla.edu/~kao/nndl/lectures/cnn.pdf
+
 
 # Additional Info
 
