@@ -18,14 +18,15 @@ $200\times 200\times 3 = 120,000$ parameters!
 
 ![Press Down Key](img/down-arrow.png)
 +++
-![gavin](img/gavin.png)
+![gavin](img/gavin.jpg)
 - computationally expensive
 - prone to overfitting
 
 ---
 
-## CNN Inspiration
-- neurons
+## CNN Inspiration: the Visual Cortex
+- Regions of cells are sensitive to specific _regions_ of the visual field
+- neurons in these regions only fire in presence of specific _features_: vertical, horizontal, or diagonal edges, etc.
 
 ---
 
