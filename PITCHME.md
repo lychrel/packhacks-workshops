@@ -69,7 +69,7 @@ parameters!
 +++
 
 ## Convolutional Layers
-- Slide filters across image --> activation maps of image responses to filters
+- Slide (_concolve_) filters across image --> activation maps of image responses to filters
 - Learn a set of filters appropriate to the problem
 
 ![Press Down Key](img/down-arrow.png)
@@ -148,7 +148,7 @@ conv1 = tf.layers.conv2d(
 pool1 = tf.layers.max_pooling2d(inputs=conv1,
                                 pool_size=[2, 2],
                                 strides=2)
-```  activation=tf.nn.relu)
+                                activation=tf.nn.relu)
 ```
 
 ![Press Down Key](img/down-arrow.png)
@@ -159,8 +159,10 @@ pool1 = tf.layers.max_pooling2d(inputs=conv1,
 last_pool_flatten = tf.reshape(pool2, [-1, 7 * 7 * 64])
                   dense = tf.layers.dense(inputs=pool2_flat,
                   units=1024, activation=tf.nn.relu)
-dropout = tf.layers.dropout(
-        inputs=dense, rate=0.4, training=mode == tf.estimator.ModeKeys.TRAIN)
+dropout = tf.layers.dropout(inputs=dense,
+                            rate=0.4,
+                            training=mode ==
+                            tf.estimator.ModeKeys.TRAIN)
 ```
 
 ![Press Down Key](img/down-arrow.png)
@@ -176,18 +178,31 @@ predictions = {
     "classes": tf.argmax(input=logits, axis=1),
     # Add `softmax_tensor` to the graph. It is used for PREDICT and by the
     # `logging_hook`.
-    "probabilities": tf.nn.softmax(logits, name="softmax_tensor")
+    "probabilities": tf.nn.softmax(logits,
+                                   name="softmax_tensor")
 }
 ```
 
 ---
 
-## Training
+# Training
 
-![Press Down Key](img/down-arrow.png)
-+++
+- minimize a _loss function_ by adjusting filter values (weights) using _backpropagation_
+
+---
+
+### Backprop
+1. *Forward Pass*: pass a training image ($24x24x3$) through network
+    - Network outputs a _prediction_ (class vector; initially bad)
+    - Calculate _loss_ between prediction and reality (label)
+2. Find $dL/dW$ (how loss changes with weights)
+3. *Backward Pass*: finding the weights that contributed _the most_ to the total loss and determining how to change them to decrease loss
+4. *Weight Update*: Update all filter weights in the _opposite direction_ of loss gradient $dL/dW$
+
+---
 
 ### Loss Function and Learning
+- example loss functions: MSE, RMS
 
 ---
 
