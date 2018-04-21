@@ -4,7 +4,32 @@ with Keras
 ---
 
 ## Convolutional Neural Networks
-- 
+-
+
+---
+
+## CNN Inspiration
+- neurons
+
+---
+
+## CNN Layers
+- convolutional, activation, pooling, dense
+
+---
+
+## Slide for each layer type and corresponding keras code
+- including properties
+
+---
+
+## model pic showing how CNN works
+![conv1](img/CONV1.png)
+![conv2](img/CONV2.png)
+
+---
+
+## car pic example
 
 ---
 
@@ -13,6 +38,22 @@ with Keras
 ### Image Input for SoftMax
 
 ![flatten](img/fimg.png)
+
+---
+
+### Implementation
+
+---
+
+## Training
+
+---
+
+## Hyperparameter Optimization
+
+---
+
+## Running it all: Google CoLab
 
 ---
 
