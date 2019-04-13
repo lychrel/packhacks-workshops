@@ -25,7 +25,7 @@ parameters!
 ![gavin](img/gavin.jpg)
 ![Press Down Key](img/down-arrow.png)
 +++
-![loco](img/ruinsane.gif)
+![loco](img/insane.gif)
 ![Press Down Key](img/down-arrow.png)
 +++
 
