@@ -80,6 +80,8 @@ CNNs use convolutional and pooling layers to _extract features_ from a labeled d
 
 ![Press Down Key](img/down-arrow.png)
 +++
+![Convolutions](img/filterGif.gif)
++++
 
 ## ReLu (Rectified Linear Units)
 - Often follow convolutional layers
