@@ -25,7 +25,7 @@ parameters!
 ![gavin](img/gavin.jpg)
 ![Press Down Key](img/down-arrow.png)
 +++
-![loco](img/insane.gif)
+!["Are You Insane Man"](img/insane.gif)
 ![Press Down Key](img/down-arrow.png)
 +++
 
